@@ -1,0 +1,24 @@
+package Projeto201.Conteudo.Java01BASICO.Aula01TiposPrimitivo.Ex04Soma;
+import java.util.Scanner;
+public class Soma {
+    public static void main(String[] args) {
+        // Abertura de Scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.println("Digite um número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.println("Digite outro número: ");
+        int numero2 = scanner.nextInt();
+
+        // Soma
+        int soma = numero1 + numero2;
+
+        // Saída de dados
+        System.out.println("A soma entre "+ numero1 +" e "+numero2+" é "+soma);
+
+        // Fechamento do Scanner
+        scanner.close();
+    }
+}
