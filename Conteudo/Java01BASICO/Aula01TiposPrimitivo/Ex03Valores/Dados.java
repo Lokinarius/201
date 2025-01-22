@@ -1,13 +1,17 @@
 package Projeto201.Conteudo.Java01BASICO.Aula01TiposPrimitivo.Ex03Valores;
 import java.util.Scanner;
+// No JAVA a entrada de dados é feita a partir do scanner, e a leitura também é feita com uma leitura tipada
+// "scanner.nextInt()" "scanner.nextBoolean()" "scanner.nextLine"
 public class Dados {
     public static void main(String[] args) {
-        // Abertura de Scanner
+        // ABERTURA DE SCANNER
         Scanner scanner = new Scanner(System.in);
+
+        // ENTRADA DE DADOS
         System.out.println("INSIRA SEUS DADOS");
         // String
         System.out.println("Nome: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         // Int
         System.out.println("Idade: ");
         int idade = scanner.nextInt();
@@ -17,16 +21,19 @@ public class Dados {
         // boolean
         System.out.println("Empregado: ");
         boolean Empregado = scanner.nextBoolean();
-        // verificação de Status
+
+        // VERIFICAÇÃO DE DADOS
         String isEmpregado;
         if (Empregado){
             isEmpregado = "Empregado";
         }else {
             isEmpregado = "Desempregado";
         }
-        // Saída de dados
+
+        // SAÍDA DE DADOS
         System.out.println("O "+nome+", que tem "+idade+", e "+altura+", está "+isEmpregado);
-        // Fechamento de scanner
+
+        // FECHAMENTO DE SCANNER
         scanner.close();
     }
 }
