@@ -1,5 +1,5 @@
 package Projeto201.Conteudo.Java01BASICO.Aula01TiposPrimitivo.Ex01Declaracao;
-
+// JAVA é uma linguagem fortemente tipada, a declaração é essencial no JAVA
 public class TipoPrimitivos {
     public static void main(String[] args) {
         /* TIPOS PRIMITIVOS */
