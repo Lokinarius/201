@@ -10,7 +10,7 @@ public class Substuicao {
         // ENTRADA DE DADOS
         System.out.println("Digite uma frase: ");
         String frase = scanner.nextLine();
-        String substituicao = frase.replaceAll("[aeiouAEIOU]","*");
+        String substituicao = frase.replaceAll("[aáàâãeéêiíoóôõuAÁÀÂEÉÊIÍOÔÕU]","*");
 
         // SAÍDA DE DADOS
         System.out.println("Suas vogais foram roubadas!");
