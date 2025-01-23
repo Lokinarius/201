@@ -1,5 +1,6 @@
 package Projeto201.Conteudo.Java01BASICO.Aula02ManipulacaoDeDados.Ex03Formatacao;
 import java.util.Scanner;
+// A partir de uma formatação em uma string pode-se manipular o resultado final apresentado
 
 public class Formatacao {
     public static void main(String[] args) {
