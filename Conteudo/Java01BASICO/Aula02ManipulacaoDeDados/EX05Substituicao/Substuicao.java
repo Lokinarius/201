@@ -1,6 +1,7 @@
 package Projeto201.Conteudo.Java01BASICO.Aula02ManipulacaoDeDados.EX05Substituicao;
 
 import java.util.Scanner;
+// Método replace() e replaceAll() servem para substituição de dados
 
 public class Substuicao {
     public static void main(String[] args) {
