@@ -1,6 +1,7 @@
 package Projeto201.Conteudo.Java01BASICO.Aula01TiposPrimitivo.Ex05Temperatura;
 import java.util.Scanner;
 // Casting implicito feito  a partir de um operação feita entre variáveis
+
 public class Temperatura {
     public static void main(String[] args) {
         // ABERTURA DE SCANNER
