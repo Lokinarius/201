@@ -1,5 +1,6 @@
 package Projeto201.Conteudo.Java01BASICO.Aula02ManipulacaoDeDados.Ex02Media;
 import java.util.Scanner;
+// Uma operação realizada que pode ter uma resultado int ou double
 
 public class Media {
     public static void main(String[] args) {
