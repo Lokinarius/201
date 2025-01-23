@@ -2,6 +2,7 @@ package Projeto201.Conteudo.Java01BASICO.Aula01TiposPrimitivo.Ex03Valores;
 import java.util.Scanner;
 // No JAVA a entrada de dados é feita a partir do scanner, e a leitura também é feita com uma leitura tipada
 // "scanner.nextInt()" "scanner.nextBoolean()" "scanner.nextLine"
+
 public class Dados {
     public static void main(String[] args) {
         // ABERTURA DE SCANNER
