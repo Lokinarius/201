@@ -1,6 +1,7 @@
 package Projeto201.Conteudo.Java01BASICO.Aula01TiposPrimitivo.Ex04Soma;
 import java.util.Scanner;
 // É possivel declarar uma nova variável a partir de uma oepração com outras duas variáveis
+
 public class Soma {
     public static void main(String[] args) {
         // Abertura de Scanner
