@@ -1,6 +1,15 @@
 package Projeto201.Conteudo.Java01BASICO.Aula03OperadoresLogicos.Ex01AndOrNot;
 
 import java.util.Scanner;
+// True e False funcionam a partir de portas lógicas e suas operações são o AND, OR e NOT
+// True AND True = True
+// True AND False = False
+// False AND False = False
+// True OR True = True
+// True OR False = True
+// False OR False = False
+// NOT True = False
+// NOT False = True
 
 public class AndOrNot {
     public static void main(String[] args) {
