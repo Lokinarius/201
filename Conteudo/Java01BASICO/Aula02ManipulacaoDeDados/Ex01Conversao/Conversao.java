@@ -1,5 +1,6 @@
 package Projeto201.Conteudo.Java01BASICO.Aula02ManipulacaoDeDados.Ex01Conversao;
 import java.util.Scanner;
+// A classe integer é bastante util para realizar uma conversão entre tipos primitivos
 
 public class Conversao {
     public static void main(String[] args) {
