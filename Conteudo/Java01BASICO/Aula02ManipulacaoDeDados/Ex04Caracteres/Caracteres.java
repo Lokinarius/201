@@ -1,6 +1,7 @@
 package Projeto201.Conteudo.Java01BASICO.Aula02ManipulacaoDeDados.Ex04Caracteres;
 
 import java.util.Scanner;
+// Métodos como .length(), .substring(), .charAt(), .toUpperCase() permitem manipular texto.
 
 public class Caracteres {
     public static void main(String[] args) {
