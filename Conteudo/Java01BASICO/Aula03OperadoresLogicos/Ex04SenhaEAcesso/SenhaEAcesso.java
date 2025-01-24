@@ -2,6 +2,7 @@ package Projeto201.Conteudo.Java01BASICO.Aula03OperadoresLogicos.Ex04SenhaEAcess
 
 import java.util.Scanner;
 // O ternário também pode ser utilizado dentro de um tipo primitivo, como um booleano ou uma string
+// O método .equals() pode ser utilizado para verificar a validade de um tipo
 
 public class SenhaEAcesso {
     public static void main(String[] args) {
