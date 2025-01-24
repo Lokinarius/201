@@ -31,7 +31,7 @@ public class AndOrNot {
         boolean e = primeirachave && segundachave;
         boolean ou = primeirachave || segundachave;
         boolean naoum = !primeirachave;
-        boolean naodois = !primeirachave;
+        boolean naodois = !segundachave;
 
         // SAÍDA DE DADOS
         System.out.println("A operação lógica AND entre "+primeirachave+" e "+segundachave+" é "+e);
