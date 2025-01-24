@@ -2,7 +2,7 @@ package Projeto201.Conteudo.Java01BASICO.Aula03OperadoresLogicos.Ex02ParEPositiv
 
 import java.util.Scanner;
 // O perador ternário é um tipo de condicional mais simples que pode ser extremamente útil, especialmente se feito em
-// uma operação lógica simples?
+// uma operação lógica simples
 
 public class ParEPositivo {
     public static void main(String[] args) {
