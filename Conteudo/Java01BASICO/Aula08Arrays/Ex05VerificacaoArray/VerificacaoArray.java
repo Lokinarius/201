@@ -4,14 +4,26 @@ import java.util.Scanner;
 
 public class VerificacaoArray {
     public static void main(String[] args) {
-        // ABERTURA DE SCANNER
         Scanner scanner = new Scanner(System.in);
 
-        // ENTRADA DE DADOS
-        int[] n = {25,67,88,32,94,53};
-        System.out.println("Informe um número e verifique se ele é um dos ");
+        int[] n ={25,67,88,32,94,53};
 
-        //
-        //
+        System.out.println("Digite um número e veja se ele está na lista: ");
+        int numero = scanner.nextInt();
+
+        boolean encontrado = false;
+        for(int i = 0; i < n.length; i++){
+            if(n[i] == numero) {
+                encontrado = true;
+                break;
+            }
+        }
+
+        if(encontrado){
+            System.out.println("O número "+numero+" está na lista!");
+        } else {
+            System.out.println("O número "+numero+" não está na lista.");
+        }
+        scanner.close();
     }
 }
