@@ -1,33 +1,26 @@
 package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class PessoaTest {
     public static void main(String[] args) {
-        // ABERTURA DE SCANNER
-        Scanner scanner = new Scanner(System.in);
-
-        // CADASTRO
         ArrayList<Pessoa> pessoas = new ArrayList<>();
-        System.out.println("Quantas pessoas deseja cadastrar? ");
-        int totPessoas = scanner.nextInt();
-        scanner.nextLine();
-        for (int i = 1; i <= totPessoas; i++) {
-            System.out.println("Cadastro da pessoa "+i+":");
 
-            System.out.println("Nome: ");
-            String nome = scanner.nextLine();
+        // Cadastro
+        Pessoa pessoa1 = new Pessoa();
+        pessoa1.nome = "William";
+        pessoa1.idade = 29;
+        pessoas.add(pessoa1);
 
-            System.out.println("Idade: ");
-            int idade = scanner.nextInt();
-            scanner.nextLine();
+        Pessoa pessoa2 = new Pessoa();
+        pessoa2.nome = "Ana";
+        pessoa2.idade = 25;
+        pessoas.add(pessoa2);
 
-            Pessoa pessoa = new Pessoa(nome,idade);
-            System.out.println();
-        }
-        // FECHAMENTO DE SCANNER
-        scanner.close();
+        Pessoa pessoa3 = new Pessoa();
+        pessoa3.nome = "Pedro";
+        pessoa2.idade = 28;
+        pessoas.add(pessoa3);
 
         // SAÍDA DE DADOS
         System.out.println("=== Pessoas Cadastradas ===");
