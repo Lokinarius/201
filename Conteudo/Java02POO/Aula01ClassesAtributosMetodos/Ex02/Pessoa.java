@@ -1,4 +1,4 @@
-package Projeto201.Conteudo.Java02POO.Aula02ModificadoresEVisibilidade;
+package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex02;
 
 public class Pessoa {
     // Atributos
