@@ -1,4 +1,4 @@
-package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex02;
+package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex02DadosComScanner;
 
 import java.util.ArrayList;
 import java.util.Scanner;

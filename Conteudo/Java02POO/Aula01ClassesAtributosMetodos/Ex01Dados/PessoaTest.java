@@ -1,4 +1,4 @@
-package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex01;
+package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex01Dados;
 
 import java.util.ArrayList;
 
