@@ -21,7 +21,7 @@ public class Pessoa {
     public void setAltura(double altura) {this.altura = altura;}
 
     // METODOS
-    public alterarNome(String novoNome){
+    public void alterarNome(String novoNome){
         if(novoNome != null && !novoNome.isBlank()){
             this.nome = novoNome;
             System.out.println("Novo nome alterado com sucesso");
@@ -30,12 +30,12 @@ public class Pessoa {
         }
     }
 
-    public alterarIdade(int novaIdade){
+    public void alterarIdade(int novaIdade){
         this.idade = novaIdade;
         System.out.println("Idade alterada com sucesso");
     }
 
-    public exibirDados(){
+    public void exibirDados(){
         System.out.println("Nome: "+nome);
         System.out.println("Seco: "+sexo);
         System.out.println("Idade; "+idade);
