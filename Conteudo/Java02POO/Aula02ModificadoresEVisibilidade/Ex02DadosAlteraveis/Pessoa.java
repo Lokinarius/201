@@ -7,7 +7,7 @@ public class Pessoa {
     private int idade;
     private double altura;
 
-    // SETTERS
+    // GETTERS E SETTERS
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}
 
