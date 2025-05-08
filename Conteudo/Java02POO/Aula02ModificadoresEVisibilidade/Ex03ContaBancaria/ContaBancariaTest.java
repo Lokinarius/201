@@ -33,6 +33,24 @@ public class ContaBancariaTest {
         // MENU
         int opcao;
         do{
+            // menu
+            System.out.println("===== MENU =====");
+            System.out.println("[1] - Ver dados de uma conta");
+            System.out.println("[2] - Ver todas as contas");
+            System.out.println("[0] - Sair");
+            opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            // switch
+            switch (opcao){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 0:
+                    break;
+                default:
+            }
 
         }while(opcao != 0);
 
