@@ -44,12 +44,56 @@ public class ContaBancariaTest {
             // switch
             switch (opcao){
                 case 1:
+                    System.out.println("Buscar por nome ou uma conta? ");
+                    int tipoDeBusca = scanner.nextInt();
+                    scanner.nextLine();
+                    boolean encontrado = false;
+
+                    // tipo de busca
+                    if (tipoDeBusca == 1){
+                        // prucarando o nome
+                        System.out.println("Digite o nome do usuário: ");
+                        String nomeBusca = scanner.nextLine();
+                        for (ContaBancaria conta : contas){
+                            if (conta.getUsuario().equalsIgnoreCase(nomeBusca)){
+                                conta.exibirSaldo();
+                                encontrado = true;
+                                break;
+                            }
+                        }
+                    } else if (tipoDeBusca == 2) {
+                        // procurando o número da conta
+                        System.out.println("Digite o número da conta: ");
+                        int numeroBusca = scanner.nextInt();
+                        for (ContaBancaria conta : contas){
+                            if (conta.getConta() == numeroBusca){
+                                conta.exibirSaldo();
+                                encontrado = true;
+                                break;
+                            }
+                        }
+                    }else{
+                        System.out.println("Opção de busca inválida");
+                    }
+
+                    // não encontrado
+                    if (!encontrado){
+                        System.out.println("Conta não existe");
+                    }
                     break;
+
                 case 2:
+                    System.out.println("\n--- Todas as Contas Cadastradas ---");
+                    for (ContaBancaria conta : contas){
+                        conta.exibirSaldo();
+                        System.out.println("----------------------");
+                    }
                     break;
                 case 0:
+                    System.out.println("Saindo...");
                     break;
                 default:
+                    System.out.println("Opção inválida.");
             }
 
         }while(opcao != 0);
