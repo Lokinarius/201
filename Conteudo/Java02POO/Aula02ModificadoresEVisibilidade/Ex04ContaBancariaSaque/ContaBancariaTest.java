@@ -9,10 +9,30 @@ public class ContaBancariaTest {
         Scanner scanner = new Scanner(System.in);
 
         // CONTAS
-        ContaBancaria conta1 = new ContaBancaria("William",1000,"837495",5444.0);
-        ContaBancaria conta2 = new ContaBancaria("Silvia",3000,"324567",9982.0);
-        ContaBancaria conta3 = new ContaBancaria("Pedro",4000,"998753",2222.0);
-        ContaBancaria conta4 = new ContaBancaria("Bárbara",8000,"378593",4000.0);
+        ContaBancaria conta1 = new ContaBancaria();
+        conta1.usuario = "William";
+        conta1.conta = 1234;
+        conta1.senha = "019375";
+        conta1.saldo = 4213.0;
+
+        ContaBancaria conta2 = new ContaBancaria();
+        conta2.usuario = "Ruby";
+        conta2.conta = 1235;
+        conta2.senha = "124534";
+        conta2.saldo = 9872.0;
+
+        ContaBancaria conta3 = new ContaBancaria();
+        conta3.usuario = "Bárbara";
+        conta3.conta = 1236;
+        conta3.senha = "926758";
+        conta3.saldo = 7776.0;
+
+        ContaBancaria conta4 = new ContaBancaria();
+        conta4.usuario = "Carlos";
+        conta4.conta = 1237;
+        conta4.senha = "934765";
+        conta4.saldo = 3567.0;
+
 
         // ARRAY DAS CONTAS
         ContaBancaria[] contas = {conta1,conta2,conta3,conta4};
@@ -60,7 +80,7 @@ public class ContaBancariaTest {
 
         ContaBancaria contaSelecionada = null;
         for(ContaBancaria conta : contas){
-            if(conta.getConta() == numeroConta){
+            if(conta.conta == numeroConta){
                 contaSelecionada = conta;
                 break;
             }

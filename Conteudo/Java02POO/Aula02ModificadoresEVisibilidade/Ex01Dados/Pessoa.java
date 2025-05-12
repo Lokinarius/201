@@ -2,16 +2,10 @@ package Projeto201.Conteudo.Java02POO.Aula02ModificadoresEVisibilidade.Ex01Dados
 
 public class Pessoa {
     // ATRIBUTOS
-    private String nome;
-    private char sexo;
-    private int idade;
-    private double altura;
-
-    // Setters
-    public void setNome(String nome) {this.nome = nome;}
-    public void setSexo(char sexo) {this.sexo = sexo;}
-    public void setIdade(int idade) {this.idade = idade;}
-    public void setAltura(double altura) {this.altura = altura;}
+    public String nome;
+    public char sexo;
+    public int idade;
+    public double altura;
 
     // METODOS
     public void exibirDados(){

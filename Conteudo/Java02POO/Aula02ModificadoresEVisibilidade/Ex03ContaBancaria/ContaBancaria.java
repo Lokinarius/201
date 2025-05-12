@@ -2,19 +2,9 @@ package Projeto201.Conteudo.Java02POO.Aula02ModificadoresEVisibilidade.Ex03Conta
 
 public class ContaBancaria {
     // ATRIBUTOS
-    private String usuario;
-    private int conta;
-    private double saldo;
-
-    // GETTERS E SETTERS
-    public String getUsuario() {return usuario;}
-    public void setUsuario(String usuario) {this.usuario = usuario;}
-
-    public int getConta() {return conta;}
-    public void setConta(int conta) {this.conta = conta;}
-
-    public double getSaldo() {return saldo;}
-    public void setSaldo(double saldo) {this.saldo = saldo;}
+    public String usuario;
+    public int conta;
+    public double saldo;
 
     // METODOS
     public void exibirSaldo(){

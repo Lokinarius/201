@@ -19,34 +19,33 @@ public class PessoaTest {
 
             // NOME
             System.out.println("Nome: ");
-            pessoa.setNome(scanner.nextLine());
+            pessoa.nome = scanner.nextLine();
 
             // SEXO
-            char sexoChar = '\0';
-            boolean sexoValido = false;
-            while(!sexoValido){
+            boolean sexoVal = false;
+            while(!sexoVal){
                 System.out.println("Sexo: ");
-                String sexoI = scanner.nextLine();
-                pessoa.setSexo(sexoChar);
-                if(!sexoI.isEmpty()){
-                    sexoChar = Character.toUpperCase(sexoI.charAt(0));
-                    if(sexoChar == 'M' || sexoChar == 'F'){
-                        sexoValido = true;
-                    }else{
+                String sexoInput = scanner.nextLine();
+                if (!sexoInput.isEmpty()){
+                    char sexoChar = Character.toUpperCase(sexoInput.charAt(0));
+                    if (sexoChar == 'M' || sexoChar == 'F'){
+                        pessoa.sexo = sexoChar;
+                        sexoVal = true;
+                    }else {
                         System.out.println("Digite apenas 'M' ou 'F'.");
                     }
                 }else{
-                    System.out.println("O campo está vazio");
+                    System.out.println("Preencha o campo vazio");
                 }
             }
 
             //IDADE
             System.out.println("Idade: ");
-            pessoa.setIdade(scanner.nextInt());
+            pessoa.idade = scanner.nextInt();
 
             //ALTURA
             System.out.println("Altura: ");
-            pessoa.setAltura(scanner.nextDouble());
+            pessoa.altura = scanner.nextDouble();
         }
         scanner.close();
 

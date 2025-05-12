@@ -17,7 +17,7 @@ public class PessoaTest {
 
             // Nome
             System.out.println("Nome: ");
-            pessoa.setNome(scanner.nextLine());
+            pessoa.nome = scanner.nextLine();
 
             // Sexo
             char sexoChar = '\0';
@@ -29,7 +29,7 @@ public class PessoaTest {
                     sexoChar = Character.toUpperCase(sexoI.charAt(0));
                     if(sexoChar == 'M' || sexoChar == 'F'){
                         sexoValido = true;
-                        pessoa.setSexo(sexoChar);
+                        pessoa.sexo = sexoChar;
                     }else{
                         System.out.println("Digite 'M' ou 'F'.");
                     }
@@ -40,11 +40,11 @@ public class PessoaTest {
 
             // Idade
             System.out.println("Idade: ");
-            pessoa.setIdade(scanner.nextInt());
+            pessoa.idade = scanner.nextInt();
 
             // Altura
             System.out.println("Altura: ");
-            pessoa.setAltura(scanner.nextDouble());
+            pessoa.altura = scanner.nextDouble();
 
             scanner.nextLine();
             pessoas[i] = pessoa;

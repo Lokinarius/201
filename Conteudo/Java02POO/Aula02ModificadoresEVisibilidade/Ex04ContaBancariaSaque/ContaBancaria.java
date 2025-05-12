@@ -2,31 +2,12 @@ package Projeto201.Conteudo.Java02POO.Aula02ModificadoresEVisibilidade.Ex04Conta
 
 public class ContaBancaria {
     // ATRIBUTOS
-    private String usuario;
-    private int conta;
-    private String senha;
-    private double saldo;
+    public String usuario;
+    public int conta;
+    public String senha;
+    public double saldo;
 
-    // CONSTRUTOR
-    public ContaBancaria(String usuario, int conta, String senha, double saldo) {
-        this.usuario = usuario;
-        this.conta = conta;
-        this.senha = senha;
-        this.saldo = saldo;
-    }
 
-    // GETTERS E SETTERS
-    public String getUsuario() {return usuario;}
-    public void setUsuario(String usuario) {this.usuario = usuario;}
-
-    public double getSaldo() {return saldo;}
-    public void setSaldo(double saldo) {this.saldo = saldo;}
-
-    public int getConta() {return conta;}
-    public void setConta(int conta) {this.conta = conta;}
-
-    public String getSenha() {return senha;}
-    public void setSenha(String senha) {this.senha = senha;}
 
     // METODO EXIBIR SALDOS
     public void exibirSaldo(){

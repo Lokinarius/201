@@ -18,13 +18,13 @@ public class ContaBancariaTest {
             ContaBancaria conta = new ContaBancaria();
 
             System.out.println("Nome do usuário: ");
-            conta.setUsuario(scanner.nextLine());
+            conta.usuario = scanner.nextLine();
 
             System.out.println("Número da conta: ");
-            conta.setConta(scanner.nextInt());
+            conta.conta = scanner.nextInt();
 
             System.out.println("Saldo da conta: ");
-            conta.setSaldo(scanner.nextDouble());
+            conta.saldo = scanner.nextDouble();
             scanner.nextLine();
 
             contas[i] = conta;
@@ -55,7 +55,7 @@ public class ContaBancariaTest {
                         System.out.println("Digite o nome do usuário: ");
                         String nomeBusca = scanner.nextLine();
                         for (ContaBancaria conta : contas){
-                            if (conta.getUsuario().equalsIgnoreCase(nomeBusca)){
+                            if (conta.usuario.equalsIgnoreCase(nomeBusca)){
                                 conta.exibirSaldo();
                                 encontrado = true;
                                 break;
@@ -66,7 +66,7 @@ public class ContaBancariaTest {
                         System.out.println("Digite o número da conta: ");
                         int numeroBusca = scanner.nextInt();
                         for (ContaBancaria conta : contas){
-                            if (conta.getConta() == numeroBusca){
+                            if (conta.conta == numeroBusca){
                                 conta.exibirSaldo();
                                 encontrado = true;
                                 break;
