@@ -2,9 +2,9 @@ package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex05Produto;
 
 public class Produto {
     // Atributos
-    public String nome;
-    public double preco;
-    public int desconto;
+    String nome;
+    double preco;
+    int desconto;
 
     // Metodos
     public void aplicarDesconto(){

@@ -2,10 +2,10 @@ package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex02DadosCom
 
 public class Pessoa {
     // Atributos
-    public String nome;
-    public char sexo;
-    public int idade;
-    public double altura;
+    String nome;
+    char sexo;
+    int idade;
+    double altura;
 
     // METODOS
     public void exibirDados(){

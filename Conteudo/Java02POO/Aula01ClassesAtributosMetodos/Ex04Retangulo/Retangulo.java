@@ -2,8 +2,8 @@ package Projeto201.Conteudo.Java02POO.Aula01ClassesAtributosMetodos.Ex04Retangul
 
 public class Retangulo {
     // Atributos
-    public int base;
-    public int altura;
+    int base;
+    int altura;
 
     // Metodos
     public void calculaArea(){
