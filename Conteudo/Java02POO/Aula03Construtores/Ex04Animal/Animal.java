@@ -1,4 +1,27 @@
 package Projeto201.Conteudo.Java02POO.Aula03Construtores.Ex04Animal;
 
 public class Animal {
+    // ATRIBUTOS
+    public String nome;
+    public String especie;
+    public boolean vertebrado;
+    public String classe;
+
+    // CONSTRUTOR
+
+    public Animal(String nome, String especie, boolean vertebrado, String classe) {
+        this.nome = nome;
+        this.especie = especie;
+        this.vertebrado = vertebrado;
+        this.classe = classe;
+
+        System.out.println("""
+        ============================
+        Nome: %s
+        Nome científico: %s
+        Vertebrado: %s
+        Classe: %s
+        ============================
+        """.formatted(nome, especie, vertebrado ? "Sim" : "Não", classe));
+    }
 }
