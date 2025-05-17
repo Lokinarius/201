@@ -4,9 +4,18 @@ import java.util.Scanner;
 
 public class CarroTest {
     public static void main(String[] args) {
-        // ABERTURA DE SCANNER
-        Scanner scanner = new Scanner(System.in);
-        // FECHAMENTO DE SCANNER
-        scanner.close();
+       Carro[] carros = new Carro[5];
+       carros[1] = new Carro("Toyota","Corola");
+       carros[2] = new Carro("Volkswalgen","Gol");
+       carros[3] = new Carro("Chevrolet","Onix");
+       carros[4] = new Carro("Fiat","Argo");
+       carros[5] = new Carro("Honda","Civic");
+
+       // Saída de dados
+        System.out.println("=== Carros cadastrados ===");
+        for (Carro c : carros){
+            c.exibirDados();
+            System.out.println("----------------------");
+        }
     }
 }
