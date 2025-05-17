@@ -6,11 +6,14 @@ public class Carro {
     public String modelo;
     public int ano;
 
-    // CONSTRUTOR
+    // CONSTRUTORES
     public Carro(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = 2023;
+    }
+    public Carro() {
+
     }
 
     // METODOS
