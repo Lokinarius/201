@@ -15,6 +15,7 @@ public class Animal {
         this.vertebrado = vertebrado;
         this.classe = classe;
 
+        // inserindo saída de dados dentro do construtor
         System.out.println("""
         ============================
         Nome: %s
@@ -22,6 +23,6 @@ public class Animal {
         Vertebrado: %s
         Classe: %s
         ============================
-        """.formatted(nome, especie, vertebrado ? "Sim" : "Não", classe));
+        """.formatted(nome, especie, vertebrado ? "Sim" : "Não", classe)); // operador ternario dentro da formatação
     }
 }
