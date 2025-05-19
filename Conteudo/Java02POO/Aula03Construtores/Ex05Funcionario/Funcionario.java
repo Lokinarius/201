@@ -21,5 +21,4 @@ public class Funcionario {
         ============================
         """.formatted(nome, cargo, salario));
     }
-
 }
