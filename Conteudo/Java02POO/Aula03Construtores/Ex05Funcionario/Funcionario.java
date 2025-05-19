@@ -7,11 +7,12 @@ public class Funcionario {
     public double salario;
 
     // CONSTRUTOR
-
     public Funcionario(String nome, String cargo, double salario) {
         this.nome = nome;
         this.cargo = cargo;
         this.salario = salario;
+
+        // inserindo saída de dados dentro do construtor
         System.out.println("""
         ============================
         Nome: %s
