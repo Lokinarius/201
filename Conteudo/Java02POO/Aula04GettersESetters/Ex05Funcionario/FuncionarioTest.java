@@ -8,5 +8,5 @@ public class FuncionarioTest {
     // SAÍDA DE DADOS
 
     // FECHAMENTO DE SCANNER
-    
+
 }
