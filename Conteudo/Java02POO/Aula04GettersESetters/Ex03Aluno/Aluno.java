@@ -41,5 +41,10 @@ public class Aluno {
                 Matrícula: %s
                 Nota Final: %s
                 """.formatted(getNome(),getMatricula(),getNotaFinal()));
+        System.out.println("Situação: "+(isAprovado()? "Aprovado": "Reprovado"));
+    }
+
+    public boolean isAprovado(){
+        return getNotaFinal() >= 6;
     }
 }
