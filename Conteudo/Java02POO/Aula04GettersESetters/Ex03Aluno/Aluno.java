@@ -6,10 +6,8 @@ public class Aluno {
     public int matricula;
     public double nota1;
     public double nota2;
-    public double notaFinal;
 
     // CONSTRUTOR
-
     public Aluno(String nome, int matricula, double nota1, double note2) {
         this.nome = nome;
         this.matricula = matricula;
@@ -18,7 +16,6 @@ public class Aluno {
     }
 
     // GETTERS AND SETTERS
-
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}
 
