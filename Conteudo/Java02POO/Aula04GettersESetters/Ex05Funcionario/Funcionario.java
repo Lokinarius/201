@@ -7,7 +7,6 @@ public class Funcionario {
     private double salario;
 
     // CONSTRUTOR
-
     public Funcionario(String nome, String cargo, double salario) {
         this.nome = nome;
         this.cargo = cargo;
@@ -16,7 +15,6 @@ public class Funcionario {
 
 
     // GETTER AND SETTERS
-
     public String getNome() {
         return nome;
     }
