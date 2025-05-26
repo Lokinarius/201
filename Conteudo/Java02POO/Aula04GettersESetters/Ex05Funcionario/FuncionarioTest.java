@@ -1,17 +1,45 @@
 package Projeto201.Conteudo.Java02POO.Aula04GettersESetters.Ex05Funcionario;
 
+import java.util.Scanner;
+
 public class FuncionarioTest {
     public static void main(String[] args) {
-        Funcionario[] funcionarios = new Funcionario[5];
-        funcionarios[0] = new Funcionario("Carlinhos","Veterinário",2050);
-        funcionarios[1] = new Funcionario("Leandro","Advogado",4000);
-        funcionarios[2] = new Funcionario("Gabriela","Psicóloga",3500);
-        funcionarios[3] = new Funcionario("Sandra","Professora",2800);
-        funcionarios[4] = new Funcionario("Wesley","Designer",3000);
+        // ABERTURA DE SCANNER
+        Scanner scanner = new Scanner(System.in);
 
+        // ENTRADA DE DADOS
+        System.out.println("Quantos funcionários há na empresa? ");
+        int totUser = scanner.nextInt();
+        scanner.nextLine();
+        Funcionario[] funcionarios = new Funcionario[totUser];
+
+        // CADASTRO
+        for (int i = 0; i < totUser; i++) {
+            System.out.println("\n Cadastro do funcionário "+(i+1)+": ");
+            Funcionario funcionario = new Funcionario();
+
+            System.out.println("Nome: ");
+            funcionario.setNome(scanner.nextLine());
+
+            System.out.println("Cargo: ");
+            funcionario.setCargo(scanner.nextLine());
+
+            System.out.println("Salário: ");
+            double salario = Double.parseDouble(scanner.nextLine());
+            funcionario.setSalario(salario);
+
+            funcionarios[i] = funcionario;
+
+            System.out.println("--------------------------------------");
+        }
+
+        // SAÍDA DE DADOS
         System.out.println("============== FUNCIONARIOS ==============");
         for(Funcionario f : funcionarios){
             f.ExibirDados();
         }
+
+        // FECHAMENTO DE SCANNER
+        scanner.close();
     }
 }
