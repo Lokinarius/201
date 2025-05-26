@@ -6,37 +6,35 @@ public class Funcionario {
     private String cargo;
     private double salario;
 
+    // CONSTANTE
+    private static final double SALARIO_MINIMO = 1412.0;
+
     // CONSTRUTOR
     public Funcionario(String nome, String cargo, double salario) {
         this.nome = nome;
         this.cargo = cargo;
-        this.salario = salario;
+        setSalario(salario);
     }
 
+    public Funcionario() {
+
+    }
 
     // GETTER AND SETTERS
-    public String getNome() {
-        return nome;
-    }
+    public String getNome() {return nome;}
+    public void setNome(String nome) {this.nome = nome;}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public String getCargo() {return cargo;}
+    public void setCargo(String cargo) {this.cargo = cargo;}
 
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
+    public double getSalario() {return salario;}
     public void setSalario(double salario) {
-        this.salario = salario;
+        if(salario < SALARIO_MINIMO){
+            System.out.println("Salário é inferior ao salário mínimo");
+            this.salario = SALARIO_MINIMO;
+        }else{
+            this.salario=salario;
+        }
     }
 
     // METODOS
