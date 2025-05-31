@@ -40,11 +40,12 @@ public class ProdutoTest {
                     [0] - Sair
                     """);
             opcao = scanner.nextInt();
+            scanner.nextLine();
 
             // Switch
             switch(opcao){
                 case 1:
-                    System.out.println("Número do produto: ");
+                    System.out.println("Código do produto: ");
                     String codigoProduto = scanner.nextLine();
 
                     Produto produtoSelecionado = null;
@@ -72,12 +73,49 @@ public class ProdutoTest {
                                 """.formatted(produtoSelecionado.getNome()));
                         operacao = scanner.nextInt();
                         scanner.nextLine();
+
                         // switch
                         switch(operacao){
                             case 1:
                                 produtoSelecionado.exibirDados();
-                                break;
+
                             case 2:
+                                System.out.println("Preço do produto: R$ %s".formatted(produtoSelecionado.getPreco()));
+                                System.out.println("Deseja fazer uma alteração no preço do produto? ");
+                                String resposta = scanner.nextLine();
+
+                                if(resposta.equalsIgnoreCase("s")){
+                                    System.out.println("""
+                                            Escolha o tipo de alteração:
+                                            [1] - Aumentar preço
+                                            [2] - Aplicar desconto
+                                            """);
+                                    int alteracao = scanner.nextInt();
+                                    if (alteracao != 1 && alteracao != 2){
+                                        System.out.println("Digite 1 ou 2 para realizar uma alteração");
+                                        scanner.nextLine();
+                                        break;
+                                    }
+
+                                    System.out.println("Informe a porcentagem da alteração");
+                                    double porcentagem = scanner.nextDouble();
+                                    scanner.nextLine();
+
+                                    if(porcentagem < 0 ){
+                                        System.out.println("Entrada invalida");
+                                        break;
+                                    }
+
+                                    if(alteracao == 2){
+                                        porcentagem *= -1;
+                                        System.out.println("Aplicando desconto de "+Math.abs(porcentagem)+"%");
+                                    }else{
+                                        System.out.println("Aplicando aumento de "+porcentagem+"%");
+                                    }
+
+                                    produtoSelecionado.alterarPreco(porcentagem);
+                                    System.out.println("Novo preço: R$ %s".formatted(produtoSelecionado.getPreco()));
+                                }
 
                             case 0:
                                 System.out.println("Saindo do menu do produto...");
