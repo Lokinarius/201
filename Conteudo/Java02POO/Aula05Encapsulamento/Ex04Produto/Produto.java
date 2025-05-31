@@ -30,7 +30,7 @@ public class Produto {
     public Produto(String nome,String codigo,String categoria, double preco) {
         setNome(nome);
         setCodigo(codigo);
-        setCodigo(categoria);
+        setCategoria(categoria);
         setPreco(preco);
     }
 
