@@ -115,7 +115,7 @@ public class EstoqueTest {
                     produtos.add(novoProduto);
                     System.out.println(novoNome+" adicionado ao estoque ");
                     break;
-                    
+
                 case 3:
                     System.out.println("Digite o código do produto a ser removido: ");
                     String codigoRemover = scanner.nextLine();

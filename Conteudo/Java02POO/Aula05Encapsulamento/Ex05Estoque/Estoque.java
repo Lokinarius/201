@@ -56,12 +56,4 @@ public class Estoque {
             System.out.println("Removido "+novQtd+" "+nome+" do estoque.");
         }
     }
-
-    public void removerEstoque(){
-
-    }
-
-    public void adicionarEstoque(){
-
-    }
 }
