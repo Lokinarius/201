@@ -39,6 +39,70 @@ public class EnderecoTest {
             // Switch
             switch (opcao){
                 case 1:
+                    System.out.println("CPF da pessoa: ");
+                    int cpfPessoa = scanner.nextInt();
+                    scanner.nextLine();
+
+                    Pessoa pessoaSelecionada = null;
+
+                    for(Pessoa p: pessoas){
+                        if(p.getCpf() == cpfPessoa){
+                            pessoaSelecionada = p;
+                            break;
+                        }
+                    }
+
+                    if(pessoaSelecionada != null){
+                        int operacao;
+                        do{
+                            System.out.println("\n==== DADOS DA PESSOA ====");
+                            pessoaSelecionada.exibirDados();
+
+                            System.out.println("""
+                                    --------------------------------
+                                    [1] - Alterar dados do endereço
+                                    [0] - Sair
+                                    --------------------------------
+                                    """);
+                            operacao = scanner.nextInt();
+                            scanner.nextLine();
+
+                            switch (operacao){
+                                case 1:
+                                    System.out.println("Digite a nova cidade: ");
+                                    String novaCidade = scanner.nextLine();
+
+                                    System.out.println("Digite o novo bairro: ");
+                                    String novoBairro = scanner.nextLine();
+
+                                    System.out.println("Digite a nova rua: ");
+                                    String novaRua = scanner.nextLine();
+
+                                    System.out.println("Digite o novo número: ");
+                                    int novoNumero = scanner.nextInt();
+                                    scanner.nextLine();
+
+                                    pessoaSelecionada.getEndereco().setCidade(novaCidade);
+                                    pessoaSelecionada.getEndereco().setBairro(novoBairro);
+                                    pessoaSelecionada.getEndereco().setRua(novaRua);
+                                    pessoaSelecionada.getEndereco().setNumero(novoNumero);
+
+                                    System.out.println(" Endereço atualizado !");
+                                    break;
+
+                                case 0:
+                                    System.out.println("Retornando ao menu principal...");
+                                    break;
+
+                                default:
+                                    System.out.println("opção inválida");
+
+                            }
+                        }while(operacao != 0);
+                    }else {
+                        System.out.println("Pessoa não encontrada ");
+                    }
+                    break;
 
                 case 2:
                     System.out.println("Digite o nome da nova pessoa a ser cadastrada: ");
@@ -70,14 +134,23 @@ public class EnderecoTest {
                 case 3:
                     System.out.println("Digite o CPF da pessoa a ser removida");
                     int cpfRemover = scanner.nextInt();
+                    scanner.nextLine();
 
-                    Endereco pessoaRemover = null;
+                    Pessoa pessoaRemover = null;
                     for(Pessoa p: pessoas){
-                        if(p.getCpf().equalsIgnoreCase(cpfRemover)){
+                        if(p.getCpf() == cpfRemover){
                             pessoaRemover = p;
                             break;
                         }
                     }
+
+                    if(pessoaRemover != null){
+                        pessoas.remove(pessoaRemover);
+                        System.out.println("Pessoa removida");
+                    }else{
+                        System.out.println("Pessoa não encontrada");
+                    }
+                    break;
 
                 case 0:
                     System.out.println("Saindo do programa...");
