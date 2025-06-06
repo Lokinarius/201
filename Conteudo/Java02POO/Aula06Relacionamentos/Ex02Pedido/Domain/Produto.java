@@ -41,7 +41,7 @@ public class Produto {
         setCategoria(categoria);
         setPreco(preco);
     }
-    
+
     // METODOS
 
 }
