@@ -31,12 +31,20 @@ public class PedidoTest {
             // Switch
             switch (opcao){
                 case 1:
+                    System.out.println("Digite o número do pedido: ");
+                    int indice = scanner.nextInt();
+                    scanner.nextLine();
 
                 case 2:
+
+
                 case 3:
+
+
                 case 0:
                     System.out.println("Saindo do programa...");
                     break;
+
                 default:
                     System.out.println("Opção inválida");
             }
