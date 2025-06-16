@@ -3,8 +3,6 @@ package Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Test;
 import Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Domain.Pedido;
 import Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Service.PedidoService;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class PedidoTest {
