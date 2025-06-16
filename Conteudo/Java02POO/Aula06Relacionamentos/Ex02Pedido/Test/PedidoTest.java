@@ -1,6 +1,7 @@
 package Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Test;
 
 import Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Domain.Pedido;
+import Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Service.PedidoService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +9,12 @@ import java.util.Scanner;
 
 public class PedidoTest {
     public static void main(String[] args) {
-        // DADOS
-        List<Pedido> pedidos = new ArrayList<>(CadastroPedido.gerarPedido());
-
-        // ABERTURA DE SCANNER
+        // SACANNER E SERVICE
         Scanner scanner = new Scanner(System.in);
+        PedidoService pedidoService = new PedidoService();
+        int opcao;
 
         // ENTRADA DE DADOS
-        int opcao;
         do{
             // Menu
             System.out.println("""
@@ -31,15 +30,27 @@ public class PedidoTest {
             // Switch
             switch (opcao){
                 case 1:
-                    System.out.println("Digite o número do pedido: ");
-                    int indice = scanner.nextInt();
-                    scanner.nextLine();
+                    System.out.println("====\t[LISTANDO PEDIDOS]\t====");
+                    pedidoService.listarPedidos();
+                    break;
 
                 case 2:
-
+                    System.out.println("====\t[ADICIONANDO NOVO PEDIDO]\t====");
+                    pedidoService.adicionar(scanner);
+                    break;
 
                 case 3:
-
+                    System.out.println("====\t[REMOVENDO PEDIDO]\t====");
+                    System.out.println("Digite o índice em que o pedido está: ");
+                    int indiceBuscar = scanner.nextInt();
+                    scanner.nextLine();
+                    Pedido pedido = pedidoService.buscarPedido(indiceBuscar - 1);
+                    if (pedido != null){
+                        pedido.exibirDados();
+                    }else{
+                        System.out.println("Pedido não encontrado");
+                    }
+                    break;
 
                 case 0:
                     System.out.println("Saindo do programa...");
