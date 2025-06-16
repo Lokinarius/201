@@ -1,6 +1,7 @@
 package Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Service;
 
 import Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Domain.Pedido;
+import Projeto201.Conteudo.Java02POO.Aula06Relacionamentos.Ex02Pedido.Domain.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,14 +15,24 @@ public class PedidoService {
         System.out.println("Digite o nome do cliente: ");
         String nome = scanner.nextLine();
 
-        System.out.println("Digite o Produto: ");
-        String produto = scanner.nextLine();
+        System.out.println("Digite o endereço: ");
+        String endereco = scanner.nextLine();
+
+        System.out.println("Digite o nome do produto: ");
+        String nomeProduto = scanner.nextLine();
+
+        System.out.println("Digite a gategoria do produto: ");
+        String categoria = scanner.nextLine();
+
+        System.out.println("Digite o preço do produto: ");
+        double preco = scanner.nextDouble();
 
         System.out.println("Digite a quantidade: ");
         int quantidade = scanner.nextInt();
         scanner.nextLine();
 
-        Pedido novoPedido = new Pedido(nome, produto, quantidade);
+        Produto novoProduto = new Produto(nomeProduto,categoria,preco);
+        Pedido novoPedido = new Pedido(nome,endereco, novoProduto, quantidade);
         pedidos.add(novoPedido);
 
         System.out.println("Pedido adicionado!");
