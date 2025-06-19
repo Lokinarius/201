@@ -1,7 +1,7 @@
-package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Service;
+package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.service;
 
-import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Domain.Pedido;
-import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Domain.Produto;
+import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.domain.Pedido;
+import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.domain.Produto;
 
 import java.util.ArrayList;
 import java.util.List;

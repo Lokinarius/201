@@ -1,7 +1,7 @@
-package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Test;
+package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.test;
 
-import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Domain.Pedido;
-import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Service.PedidoService;
+import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.domain.Pedido;
+import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.service.PedidoService;
 
 import java.util.Scanner;
 

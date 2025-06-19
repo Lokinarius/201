@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex03Empresa.Domain;
+package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex03Empresa.domain;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.Test;
+package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.test;
 
-import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.Domain.Endereco;
-import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.Domain.Pessoa;
+import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.domain.Endereco;
+import projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.domain.Pessoa;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.Domain;
+package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex01Enderenço.domain;
 
 public class Endereco {
     // ATRIBUTOS

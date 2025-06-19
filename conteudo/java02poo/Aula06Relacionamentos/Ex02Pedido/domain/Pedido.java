@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.Domain;
+package projeto201.conteudo.java02poo.Aula06Relacionamentos.Ex02Pedido.domain;
 
 public class Pedido {
     // ATRIBUTOS
