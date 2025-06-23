@@ -1,31 +1,24 @@
 package projeto201.conteudo.java02poo.aula06relacionamentos.ex03empresa.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Empresa {
     // ATRIBUTOS
-    private String nomeEmpresa;
-    private int cnpj;
+    private final String nomeEmpresa;
+    private final String cnpj;
     private List<Funcionario> funcionarios;
 
-    // GETTERS E SETTERS
-    public String getNomeEmpresa() {
-        return nomeEmpresa;
-    }
-
-    public int getCnpj() {
-        return cnpj;
-    }
-
-    public List<Funcionario> getFuncionarios() {
-        return funcionarios;
-    }
-
     // CONSTRUTOR
-    public Empresa(String nomeEmpresa, int cnpj, List<Funcionario> funcionarios) {
+    public Empresa(String nomeEmpresa, String cnpj){
         this.nomeEmpresa = nomeEmpresa;
         this.cnpj = cnpj;
-        this.funcionarios = funcionarios;
+        this.funcionarios = new ArrayList<>();
     }
+
+    // GETTERS
+    public String getNomeEmpresa() {return nomeEmpresa;}
+    public String getCnpj() {return cnpj;}
+    public List<Funcionario> getFuncionarios() {return funcionarios;}
 }
 
