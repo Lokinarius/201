@@ -18,14 +18,25 @@ public class EmpresaService {
     }
 
     // BUSCAR FUNCIONARIO
-    public Funcionario buscarFuncionario(String nome){
-        for (Funcionario f : funcionarios){
-            if (f.getNome().equalsIgnoreCase(nome)){
+    public Funcionario buscarFuncionarioPorNome(String nome) {
+        for (Funcionario f : funcionarios) {
+            if (f.getNome().equalsIgnoreCase(nome)) {
                 return f;
             }
         }
-        System.out.println("Funcionário não encontrado");
         return null;
+    }
+
+    public Funcionario buscarFuncionario() {
+        System.out.println("Digite o nome do funcionário: ");
+        String nome = scanner.nextLine();
+        Funcionario f = buscarFuncionarioPorNome(nome);
+        if (f == null) {
+            System.out.println("Funcionário não encontrado");
+        }else{
+            f.exibirDados();
+        }
+        return f;
     }
 
     // CONTRATAR FUNCIONARIO
@@ -48,28 +59,28 @@ public class EmpresaService {
 
     // CONCEDER AUMENTO
     public void concederAumeto(){
-        System.out.println("Digite o nome do funcionário: ");
-        String nome = scanner.nextLine();
-
-        Funcionario funcionario = buscarFuncionario(nome);
+        Funcionario funcionario = buscarFuncionario();
         if(funcionario != null){
             System.out.println("digite o valor do aumento: ");
             double aumento = scanner.nextDouble();
             scanner.nextLine();
 
             double novoSalario = funcionario.getSalario()+aumento;
-            funcionario.setSalario(novoSalario);
-            System.out.println("Novo salário de "+funcionario.getNome()+": "+ novoSalario);
+            if(aumento < 0){
+                System.out.println("Aumento não pode ser negativo");
+            }else{
+                funcionario.setSalario(novoSalario);
+                System.out.println("Novo salário de "+funcionario.getNome()+": "+ novoSalario);
+            }
         }
     }
 
     // DEMITIR FUNCIONARIO
-    public void demitirFuncionario(String nome){
-        Funcionario funcionario = buscarFuncionario(nome);{
-            if(funcionario != null){
-                funcionarios.remove(funcionario);
-                System.out.println(funcionario.getNome()+" demitido");
-            }
+    public void demitirFuncionario(){
+        Funcionario funcionario = buscarFuncionario();
+        if (funcionario != null) {
+            funcionarios.remove(funcionario);
+            System.out.println(funcionario.getNome() + " demitido");
         }
     }
 
