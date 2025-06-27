@@ -1,9 +1,7 @@
 package projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.test;
 
 import projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.service.ConcessionariaService;
-
 import java.util.Scanner;
-
 
 public class ConcessionariaTest {
     public static void main(String[] args) {
@@ -30,16 +28,22 @@ public class ConcessionariaTest {
             // Switch
             switch (opcao){
                 case 1:
+                    concessionariaService.listarCarros();
                     break;
                 case 2:
+                    concessionariaService.listarProprietarios();
                     break;
                 case 3:
+                    concessionariaService.buscarCarro();
                     break;
                 case 4:
+                    concessionariaService.buscarProprietario();
                     break;
                 case 5:
+                    concessionariaService.vendaCarro();
                     break;
                 case 6:
+                    concessionariaService.compraCarro();
                     break;
                 case 0:
                     System.out.println("Saindo...");
