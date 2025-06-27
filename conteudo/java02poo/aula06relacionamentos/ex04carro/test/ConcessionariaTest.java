@@ -4,7 +4,6 @@ import projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.service.Con
 
 import java.util.Scanner;
 
-import static projeto201.conteudo.java01basico.aula11exerciciosintermediarioseeavancados.ex05cadastrodeusuarioesenhas.CadastroDeUsuariosESenha.scanner;
 
 public class ConcessionariaTest {
     public static void main(String[] args) {
