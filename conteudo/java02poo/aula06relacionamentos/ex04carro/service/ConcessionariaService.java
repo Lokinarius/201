@@ -83,6 +83,16 @@ public class ConcessionariaService {
     public void compraCarro() {
         System.out.println("Nome do proprietario: ");
         String nome = scanner.nextLine();
+        Proprietario proprietario = buscarProprietarioPorNome(nome);
+
+        if(proprietario == null){
+            proprietario = new Proprietario();
+            proprietario.setNome(nome);
+            System.out.println("CPF do novo proprietário: ");
+            String cpf = scanner.nextLine();
+            proprietario.setCpf(cpf);
+            proprietarios.add(proprietario);
+        }
 
         System.out.println("Marca do carro: ");
         String marca = scanner.nextLine();
@@ -92,8 +102,19 @@ public class ConcessionariaService {
 
         System.out.println("Ano de fabricação: ");
         int ano = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Placa do veículo");
         String placa = scanner.nextLine();
+
+        Carro carro = new Carro();
+        carro.setMarca(marca);
+        carro.setModelo(modelo);
+        carro.setAno(ano);
+        carro.setPlaca(placa);
+        carro.setProprietario(proprietario);
+
+        carros.add(carro);
+        System.out.println("Carro comprado com sucesso!");
     }
 }
