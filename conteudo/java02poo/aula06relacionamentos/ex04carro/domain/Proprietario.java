@@ -8,6 +8,8 @@ public class Proprietario {
     private String cpf;
     private List<Carro> carros;
 
+
+
     // GETTERS E SETTERS
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}
@@ -19,6 +21,10 @@ public class Proprietario {
     public void setCarros(List<Carro> carros) {this.carros = carros;}
 
     // CONSTRUTOR
+    public Proprietario() {
+
+    }
+
     public Proprietario(String nome, String cpf, List<Carro> carros) {
         setNome(nome);
         setCpf(cpf);
