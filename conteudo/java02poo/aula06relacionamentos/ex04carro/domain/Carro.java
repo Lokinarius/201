@@ -8,6 +8,8 @@ public class Carro {
     private String placa;
     private Proprietario proprietario;
 
+
+
     // GETTERS E SETTERS
     public String getMarca() {return marca;}
     public void setMarca(String marca) {this.marca = marca;}
@@ -16,7 +18,14 @@ public class Carro {
     public void setModelo(String modelo) {this.modelo = modelo;}
 
     public int getAno() {return ano;}
-    public void setAno(int ano) {this.ano = ano;}
+    public void setAno(int ano) {
+        if (ano > 1900 && ano <= java.time.Year.now().getValue()) {
+            this.ano = ano;
+        } else {
+            System.out.println("Ano inválido! Definido como 0.");
+            this.ano = 0;
+        }
+    }
 
     public String getPlaca() {return placa;}
     public void setPlaca(String placa) {this.placa = placa;}
@@ -25,6 +34,10 @@ public class Carro {
     public void setProprietario(Proprietario proprietario) {this.proprietario = proprietario;}
 
     // CONSTRUTOR
+    public Carro() {
+
+    }
+
     public Carro(String marca, String modelo, int ano, String placa, Proprietario proprietario) {
         setMarca(marca);
         setModelo(modelo);
@@ -34,15 +47,16 @@ public class Carro {
     }
 
     // METODOS
-    public void exibirDados(){
+    public void exibirDados() {
+        String nomeProprietario = (getProprietario() != null) ? getProprietario().getNome() : "Sem proprietário";
         System.out.println("""
                 =======================
                 Marca:\t%s
                 Modelo:\t%s
-                Ano:\t%s
+                Ano:\t%d
                 Placa:\t%s
                 Proprietário:\t%s
-                """.formatted(getMarca(),getModelo(),getAno(),getPlaca(),getProprietario()));
+                """.formatted(getMarca(), getModelo(), getAno(), getPlaca(), nomeProprietario));
     }
 
 }
