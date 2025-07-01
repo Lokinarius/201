@@ -17,7 +17,6 @@ public class Aluno {
 
 
     // GETTER E SETTERS
-
     public String getNome(String nome) {return this.nome;}
     public void setNome(String nome) {this.nome = nome;}
 
@@ -39,7 +38,7 @@ public class Aluno {
                 Matrícula: %s
                 Curso: %s
                 Período: %s
-                """.formatted(getNome(nome),getMatricula(matricula),getCurso(curso),getPeriodo(periodo)));
+                """.formatted(nome,matricula,curso,periodo));
     }
 
 
