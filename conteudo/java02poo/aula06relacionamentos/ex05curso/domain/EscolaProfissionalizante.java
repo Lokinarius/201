@@ -6,7 +6,6 @@ public class EscolaProfissionalizante {
     // ATRIBUTOS
     private String nome;
     private String sede;
-    private List
 
     // CONSTRUTOR
 
