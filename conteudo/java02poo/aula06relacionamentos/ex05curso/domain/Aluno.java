@@ -6,29 +6,37 @@ public class Aluno {
     private int matricula;
     private String curso;
     private int periodo;
+    private Sede sede;
 
     // CONSTRUTOR
-    public Aluno(String nome, int matricula, String curso, int periodo) {
+    public Aluno(String nome, int matricula, String curso, int periodo, Sede sede) {
         setNome(nome);
         setMatricula(matricula);
         setCurso(curso);
         setPeriodo(periodo);
+        this.sede = sede;
+
+        if(sede != null){
+            sede.adicionarAluno(this);
+        }
     }
 
 
     // GETTER E SETTERS
-    public String getNome(String nome) {return this.nome;}
+    public String getNome() {return this.nome;}
     public void setNome(String nome) {this.nome = nome;}
 
-    public int getMatricula(int matricula) {return this.matricula;}
+    public int getMatricula() {return this.matricula;}
     public void setMatricula(int matricula) {this.matricula = matricula;}
 
-    public String getCurso(String curso) {return this.curso;}
+    public String getCurso() {return this.curso;}
     public void setCurso(String curso) {this.curso = curso;}
 
-    public int getPeriodo(int periodo) {return this.periodo;}
+    public int getPeriodo() {return this.periodo;}
     public void setPeriodo(int periodo) {this.periodo = periodo;}
 
+    public Sede getSede() {return sede;}
+    public void setSede(Sede sede) {this.sede = sede;}
 
     // METODOS
     public void exibirDados(){
@@ -38,7 +46,8 @@ public class Aluno {
                 Matrícula: %s
                 Curso: %s
                 Período: %s
-                """.formatted(nome,matricula,curso,periodo));
+                Sede: %s
+                """.formatted(nome,matricula,curso,periodo,sede));
     }
 
 
