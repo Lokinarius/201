@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CriarSede {
     public static List<Sede> gerarSedes(){
-// Cria sedes com listas de alunos inicialmente vazias
+
         List<Sede> sedes = new ArrayList<>();
         sedes.add(new Sede("Campus Central", new ArrayList<>()));
         sedes.add(new Sede("Unidade Zona Norte", new ArrayList<>()));
