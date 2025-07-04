@@ -19,7 +19,7 @@ public class PessoaTest {
             Pessoa pessoa = new Pessoa();
 
             System.out.println("Nome: ");
-            String nome = scanner.nextLine();
+            pessoa.nome = scanner.nextLine();
 
             System.out.println("Sexo: ");
             String sexoI = scanner.nextLine();
@@ -28,11 +28,14 @@ public class PessoaTest {
             }
 
             System.out.println("Idade: ");
-            int idade = scanner.nextInt();
+            pessoa.idade = scanner.nextInt();
 
             System.out.println("Altura: ");
-            double altura = scanner.nextDouble();
+            pessoa.altura = scanner.nextDouble();
             scanner.nextLine();
+
+            pessoas.add(pessoa);
+
         }
         // FECHAMENTO DO SCANNER
         scanner.close();

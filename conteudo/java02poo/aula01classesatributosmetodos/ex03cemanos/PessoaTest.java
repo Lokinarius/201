@@ -11,10 +11,10 @@ public class PessoaTest {
         Pessoa pessoa = new Pessoa();
 
         System.out.println("Nome: ");
-        String nome = scanner.nextLine();
+        pessoa.nome = scanner.nextLine();
 
         System.out.println("Idade: ");
-        int idade = scanner.nextInt();
+        pessoa.idade = scanner.nextInt();
 
         scanner.close();
 

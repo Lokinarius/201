@@ -42,10 +42,15 @@ public class PessoaTest {
             //IDADE
             System.out.println("Idade: ");
             pessoa.idade = scanner.nextInt();
+            scanner.nextLine();
 
             //ALTURA
             System.out.println("Altura: ");
             pessoa.altura = scanner.nextDouble();
+            scanner.nextLine();
+
+            pessoas[i] = pessoa;
+            System.out.println("---------------------------------");
         }
         scanner.close();
 

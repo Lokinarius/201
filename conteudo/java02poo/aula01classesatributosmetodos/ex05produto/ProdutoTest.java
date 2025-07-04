@@ -10,28 +10,36 @@ public class ProdutoTest {
         Produto produto = new Produto();
 
         System.out.println("Digite o nome do produto: ");
-        String nome = scanner.nextLine();
+        produto.nome = scanner.nextLine();
         System.out.println("Digite o preço do produto: \nR$");
-        double preco = scanner.nextDouble();
+        produto.preco = scanner.nextDouble();
+        scanner.nextLine();
 
-        System.out.println("O produto tem algum desconto? [S/N]");
-        String resp = scanner.nextLine();
-        if (!resp.equalsIgnoreCase("s") && !resp.equalsIgnoreCase("n")){
-            System.out.println("Responda S ou N");
-        }else{
-            if (resp.equalsIgnoreCase("s")){
-                System.out.println("De quantos % o desconto a ser aplicado?");
-                int desconto = scanner.nextInt();
-                scanner.nextLine();
+        String resp;
+        while(true){
+            System.out.println("O produto tem algum desconto [s/n]");
+            resp = scanner.nextLine();
 
-                if(desconto < 1 || desconto > 100){
-                    System.out.println("O desconto deve ser entre 1 e 100%");
-                }else{
-                    produto.aplicarDesconto();
-                }
+            if(resp.equalsIgnoreCase("s")||resp.equalsIgnoreCase("n")){
+                break;
             }else{
-                System.out.println("Sem desconto aplicado.");
+                System.out.println("Resposta invalida");
             }
         }
+        if(resp.equalsIgnoreCase("s")){
+            System.out.println("De quantos % o desconto a ser aplicado? ");
+            int desconto = scanner.nextInt();
+            scanner.nextLine();
+
+            if(desconto < 1 || desconto > 100){
+                System.out.println("O desconto deve ser entre 1% a 100%");
+            }else{
+                produto.desconto = desconto;
+                produto.aplicarDesconto();
+            }
+        }else{
+            System.out.println("Sem desconto aplicado.");
+        }
+        scanner.close();
     }
 }

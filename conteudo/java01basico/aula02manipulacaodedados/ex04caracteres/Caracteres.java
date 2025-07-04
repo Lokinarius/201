@@ -14,7 +14,7 @@ public class Caracteres {
         int caracteres = texto.length();
 
         // SAÍDA DE DADOS
-        System.out.println("A froque você digitou foi: \""+texto+"\",e ela possui "+caracteres+" caracteres.");
+        System.out.println("A frase que você digitou foi: \""+texto+"\",e ela possui "+caracteres+" caracteres.");
 
         // FECHAMENTO DE SCANNER
         scanner.close();

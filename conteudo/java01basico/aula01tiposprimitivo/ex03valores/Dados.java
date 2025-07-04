@@ -16,23 +16,21 @@ public class Dados {
         // Int
         System.out.println("Idade: ");
         int idade = scanner.nextInt();
+        scanner.nextLine();
         // Double
         System.out.println("Altura: ");
         double altura = scanner.nextDouble();
+        scanner.nextLine();
         // boolean
         System.out.println("Empregado: ");
-        boolean Empregado = scanner.nextBoolean();
+        boolean empregado = scanner.nextBoolean();
 
         // VERIFICAÇÃO DE DADOS
-        String isEmpregado;
-        if (Empregado){
-            isEmpregado = "Empregado";
-        }else {
-            isEmpregado = "Desempregado";
-        }
+
+        String statusEmprego = empregado ? "Empregado" : "Desempregado";
 
         // SAÍDA DE DADOS
-        System.out.println("O "+nome+", que tem "+idade+", e "+altura+", está "+isEmpregado);
+        System.out.println("O "+nome+", que tem "+idade+", e "+altura+", está "+statusEmprego);
 
         // FECHAMENTO DE SCANNER
         scanner.close();

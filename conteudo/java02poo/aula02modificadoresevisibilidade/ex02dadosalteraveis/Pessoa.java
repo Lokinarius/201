@@ -24,8 +24,8 @@ public class Pessoa {
 
     public void exibirDados(){
         System.out.println("Nome: "+nome);
-        System.out.println("Seco: "+sexo);
-        System.out.println("Idade; "+idade);
+        System.out.println("Sexo: "+sexo);
+        System.out.println("Idade: "+idade);
         System.out.println("Altura: "+altura);
     }
 }

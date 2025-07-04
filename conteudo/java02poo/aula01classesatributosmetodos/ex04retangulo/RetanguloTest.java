@@ -10,10 +10,10 @@ public class RetanguloTest {
         Retangulo retangulo = new Retangulo();
 
         System.out.println("Digite o tamanho da base do retângulo: ");
-        int base = scanner.nextInt();
+        retangulo.base = scanner.nextInt();
 
         System.out.println("Digite o tamanho da altura do retângulo: ");
-        int altura = scanner.nextInt();
+        retangulo.altura = scanner.nextInt();
 
         scanner.close();
         
