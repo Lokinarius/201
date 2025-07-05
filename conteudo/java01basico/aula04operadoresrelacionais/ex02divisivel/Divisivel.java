@@ -17,7 +17,7 @@ public class Divisivel {
         if(num1 %num2 == 0){
             System.out.println("O número "+num1+" é divisível por "+num2+" e o seu resultado é "+num1/num2);
         }else{
-            System.out.println("O número "+num1+"não é divisivel por "+num2);
+            System.out.println("O número "+num1+" não é divisivel por "+num2);
         }
 
         // FECHAMENTO DE SCANNER

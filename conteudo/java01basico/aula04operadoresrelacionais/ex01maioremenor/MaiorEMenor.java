@@ -18,7 +18,7 @@ public class MaiorEMenor {
         // SAÍDA DE DADOS
         if (num1 > num2) {
             System.out.println("O número "+num1+" é maior que o número "+num2);
-        } else if (num2 < num1) {
+        } else if (num2 > num1) {
             System.out.println("O número "+num2+" é maior que o número "+num1);
         }else {
             System.out.println("Os dois números são iguais");
