@@ -23,26 +23,33 @@ public class CadastroDeUsuariosESenha {
             switch (opcao){
                 case 1:
                     cadastrarUsuario();
+                    break;
                 case 2:
                     listarUsuarios();
-                case 3:
+                    break;
+                case 0:
                     System.out.println("Saindo do programa");
+                    break;
                 default:
                     System.out.println("Opção inválida");
             }
         }while(opcao != 0);
+        scanner.close();
     }
     // metodo para cadastrar usuário
     private static void cadastrarUsuario(){
         System.out.println("Digite o nome do usuário: ");
         String login = scanner.nextLine();
+
         if(usuarios.containsKey(login)){
             System.out.println("Usuário indisponível");
             return;
         }
+
         System.out.println("Digite a senha: ");
         String senha = scanner.nextLine();
-        if (Senha.senhaValida(senha)){
+
+        if (!Senha.senhaValida(senha)){
             System.out.println("""
             Sua senha deve conter:
             - No minímo 8 caracteres
@@ -57,12 +64,14 @@ public class CadastroDeUsuariosESenha {
         usuarios.put(login, new Usuario(login,senha));
         System.out.println("Usuário cadastrado com sucesso");
     }
+
     // metodo para listar usuário
     private static void listarUsuarios(){
         if(usuarios.isEmpty()){
             System.out.println("Nenhum usuário cadastrado");
             return;
         }
+
         System.out.println("\n--- Usuários Cadastrados ---");
         for (Usuario u : usuarios.values()){
             System.out.println(u);

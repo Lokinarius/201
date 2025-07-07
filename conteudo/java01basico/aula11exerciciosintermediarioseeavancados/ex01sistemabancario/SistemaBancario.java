@@ -41,47 +41,48 @@ public class SistemaBancario {
     }
 
     // CLASSE PRINCIPAL
-    public class Main{
-        public static void main(String[] args) {
-            // CABEÇALHO
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("== BANCO LOKINARIUS ==");
-            System.out.println("Digite seu usuário: ");
-            String nome = scanner.nextLine();
+    public static void main(String[] args) {
+        // CABEÇALHO
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("== BANCO LOKINARIUS ==");
+        System.out.println("Digite seu usuário: ");
+        String nome = scanner.nextLine();
 
-            ContaBancaria conta = new ContaBancaria(nome);
+        ContaBancaria conta = new ContaBancaria(nome);
 
-            int escolha;
-            do {
-                // MENU
-                System.out.println("---------- MENU ----------");
-                System.out.println("1 - Depositar");
-                System.out.println("2 - Sacar");
-                System.out.println("3 - Saldo");
-                System.out.println("0 - Sair");
-                System.out.println("Escolha uma opção: ");
-                escolha = scanner.nextInt();
+        int escolha;
+        do {
+            // MENU
+            System.out.println("---------- MENU ----------");
+            System.out.println("1 - Depositar");
+            System.out.println("2 - Sacar");
+            System.out.println("3 - Saldo");
+            System.out.println("0 - Sair");
+            System.out.println("Escolha uma opção: ");
+            escolha = scanner.nextInt();
 
-                // SWITCH DE ESCOLHAS
-                switch(escolha){
-                    case 1:
-                        System.out.println("Digite o valor do depósito: ");
-                        double valorDeposito = scanner.nextDouble();
-                        conta.depositar(valorDeposito);
-                        break;
-                    case 2:
-                        System.out.println("Digite o valor do saque: ");
-                        double valorSaque = scanner.nextDouble();
-                        conta.sacar(valorSaque);
-                        break;
-                    case 3:
-                        conta.exibirSaldo();
-                        break;
-                    default:
-                        System.out.println("Opção inválida.");
-                }
-            }while(escolha != 0);
-            scanner.close();
-        }
+            // SWITCH DE ESCOLHAS
+            switch(escolha){
+                case 1:
+                    System.out.println("Digite o valor do depósito: ");
+                    double valorDeposito = scanner.nextDouble();
+                    conta.depositar(valorDeposito);
+                    break;
+                case 2:
+                    System.out.println("Digite o valor do saque: ");
+                    double valorSaque = scanner.nextDouble();
+                    conta.sacar(valorSaque);
+                    break;
+                case 3:
+                    conta.exibirSaldo();
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+            }
+        }while(escolha != 0);
+        scanner.close();
     }
 }
