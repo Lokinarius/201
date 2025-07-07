@@ -18,7 +18,7 @@ public class CalculadoraSimples {
         // SAÍDA DE DADOS
         switch (operacao){
             case "+":
-                System.out.println("Soma: "+(num1 - num2));
+                System.out.println("Soma: "+(num1 + num2));
                 break;
             case "-":
                 System.out.println("Subtração: "+(num1 - num2));

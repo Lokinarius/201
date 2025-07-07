@@ -8,7 +8,7 @@ public class SomaMatriz {
     public static void exibirMatriz(int[][] matriz) {
         for (int[] linha : matriz) {
             for (int valor : linha) {
-                System.out.println(valor+" ");
+                System.out.print(valor+" ");
             }
             System.out.println();
         }
@@ -49,7 +49,7 @@ public class SomaMatriz {
             }
         }
 
-        System.out.println("\n Matriz digitada pelo usuário: ");
+        System.out.println("\nMatriz digitada pelo usuário: ");
         exibirMatriz(matrizUser);
         System.out.println("Soma dos elementos: "+somaUser);
     }

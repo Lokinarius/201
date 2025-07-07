@@ -10,10 +10,15 @@ public class MaiorEMenor {
         // ENTRADA DE DADOS
         System.out.println("Informe a quantidade de elementos do array");
         int total = scanner.nextInt();
+
         int[] num = new int[total];
+
+        System.out.println("Digite o 1º número");
+        num[0] = scanner.nextInt();
         int maior = num[0];
         int menor = num[0];
-        for(int i = 0; i < num.length;i++){
+
+        for(int i = 1; i < num.length;i++){
             System.out.println("Digite o "+(i+1)+"ª número");
             num[i] = scanner.nextInt();
             // lógica para maior e menor número
@@ -26,7 +31,7 @@ public class MaiorEMenor {
 
         }
         // SAÍDA DE DADOS
-        System.out.println("O maior número informado foi "+maior+"e o menor número informado foi "+menor);
+        System.out.println("O maior número informado foi "+maior+", e o menor número informado foi "+menor);
 
         // FECHAMENTO DO SCANNER
         scanner.close();
