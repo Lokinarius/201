@@ -10,15 +10,10 @@ public class Carro {
     public Carro(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
-        this.ano = 2023;
+        this.ano = ano;
     }
     public Carro() {
 
-    }
-
-    // METODOS
-    public void setAno(int ano) {
-        this.ano = ano;
     }
 
     public void exibirDados(){

@@ -6,6 +6,9 @@ public class CarroTest {
     public static void main(String[] args) {
         // ABERTURA DE SCANNER
         Scanner scanner = new Scanner(System.in);
+
+        // ENTRADA DE DADOS
+        System.out.println("Quantos carros deseja cadastrar? ");
         int totCarro = scanner.nextInt();
         scanner.nextLine();
 
@@ -13,22 +16,19 @@ public class CarroTest {
 
         // CARROS
         for (int i = 0; i < totCarro; i++) {
-            System.out.println("\n Cadastro do carro "+(i+1)+": ");
-            Carro carro = new Carro();
+            System.out.println("\nCadastro do carro "+(i+1)+": ");
 
             System.out.println("Marca do carro: ");
-            carro.marca = scanner.nextLine();
+            String marca = scanner.nextLine();
 
             System.out.println("Modelo do carro: ");
-            carro.modelo = scanner.nextLine();
+            String modelo = scanner.nextLine();
 
             System.out.println("Ano do carro: ");
-            carro.ano = scanner.nextInt();
+            int ano = scanner.nextInt();
             scanner.nextLine();
 
-            carros[i] = carro;
-
-
+            carros[i] = new Carro(marca,modelo,ano);
         }
         // SAÍDA DE DADOS
         System.out.println("\n --- Carros Cadastrados --- ");
