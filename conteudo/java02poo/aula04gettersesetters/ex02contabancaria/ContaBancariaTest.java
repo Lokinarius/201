@@ -8,35 +8,39 @@ public class ContaBancariaTest {
         Scanner scanner = new Scanner(System.in);
 
         // ENTRADA DE DADOS
-        System.out.println("Quantos usuários deseja cadastras? ");
-        int totUser = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("Quantos usuários deseja cadastrar? ");
+        int totUser = Integer.parseInt(scanner.nextLine());
+
         ContaBancaria[] contas = new ContaBancaria[totUser];
 
         // CADASTRO
         for (int i = 0; i < totUser; i++) {
             System.out.println("\nCadastro da pessoa "+(i+1)+": ");
-            ContaBancaria conta = new ContaBancaria();
 
             System.out.println("Nome do usuário: ");
-            conta.usuario = scanner.nextLine();
+            String nome = scanner.nextLine();
 
             System.out.println("Número da conta: ");
-            conta.conta = scanner.nextInt();
+            int numeroConta = Integer.parseInt(scanner.nextLine());
 
             double saldo = 0;
             boolean saldoValido = false;
+
             while(!saldoValido){
                 System.out.println("Saldo da conta: ");
                 String entrada = scanner.nextLine();
-                saldo = Double.parseDouble(entrada);
-                if (saldo > 0){
-                    saldoValido = true;
-                }else{
-                    System.out.println("Saldo negativo!");
+                try {
+                    saldo = Double.parseDouble(entrada);
+                    if (saldo > 0) {
+                        saldoValido = true;
+                    } else {
+                        System.out.println("Saldo negativo!");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Formato inválido! Digite um número decimal.");
                 }
             }
-            contas[i] = new ContaBancaria(conta.usuario, conta.conta,conta.saldo);
+            contas[i] = new ContaBancaria(nome, numeroConta, saldo);
             System.out.println();
         }
 
@@ -57,7 +61,7 @@ public class ContaBancariaTest {
             // switch
             switch(opcao){
                 case 1:
-                    System.out.println("Buscar por nome ou conta? ");
+                    System.out.println("Buscar por nome ou conta?[1/2] ");
                     int tipoDeBusca = scanner.nextInt();
                     scanner.nextLine();
                     boolean encontrado = false;
@@ -67,6 +71,7 @@ public class ContaBancariaTest {
                         // procurando nome
                         System.out.println("Digite o nome do proprietário: ");
                         String nomeBusca = scanner.nextLine();
+
                         for (ContaBancaria conta : contas){
                             if(conta.usuario.equalsIgnoreCase(nomeBusca)){
                                 conta.exibirDados();
@@ -78,6 +83,8 @@ public class ContaBancariaTest {
                         // procurando pelo número da conta
                         System.out.println("Digite o número da conta");
                         int numeroBusca = scanner.nextInt();
+                        scanner.nextLine();
+
                         for(ContaBancaria conta: contas){
                             conta.exibirDados();
                             encontrado = true;
@@ -86,6 +93,8 @@ public class ContaBancariaTest {
                     }else{
                         System.out.println("Opção de busca inválida");
                     }
+                    break;
+
                 case 2:
                     System.out.println("\n --- Todas contas cadastradas --- ");
                     for(ContaBancaria conta : contas){
@@ -93,8 +102,11 @@ public class ContaBancariaTest {
                         System.out.println("---------------------------");
                     }
                     break;
+
                 case 0:
                     System.out.println("Saindo...");
+                    break;
+
                 default:
                     System.out.println("Opção inválida!");
             }

@@ -15,7 +15,7 @@ public class FuncionarioTest {
 
         // CADASTRO
         for (int i = 0; i < totUser; i++) {
-            System.out.println("\n Cadastro do funcionário "+(i+1)+": ");
+            System.out.println("\nCadastro do funcionário "+(i+1)+": ");
             Funcionario funcionario = new Funcionario();
 
             System.out.println("Nome: ");
