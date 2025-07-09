@@ -17,7 +17,7 @@ public class PedidoTest {
             // Menu
             System.out.println("""
                     ======\tMENU\t======
-                    [1] - Verificar um pedido
+                    [1] - Listar todos pedidos
                     [2] - Adicionar um pedido ao sistema
                     [3] - Remover um pedido
                     [0] - Sair
@@ -42,9 +42,19 @@ public class PedidoTest {
                     System.out.println("Digite o índice em que o pedido está: ");
                     int indiceBuscar = scanner.nextInt();
                     scanner.nextLine();
+
                     Pedido pedido = pedidoService.buscarPedido(indiceBuscar - 1);
                     if (pedido != null){
                         pedido.exibirDados();
+
+                        System.out.println("Deseja remover este pedido?");
+                        String confirmar = scanner.nextLine();
+
+                        if(confirmar.equalsIgnoreCase("s")){
+                            pedidoService.removerPedido(indiceBuscar -1);
+                        }else{
+                            System.out.println("Remoção cancelada.");
+                        }
                     }else{
                         System.out.println("Pedido não encontrado");
                     }
@@ -55,7 +65,7 @@ public class PedidoTest {
                     break;
 
                 default:
-                    System.out.println("Opção inválida");
+                    System.out.println("Opção inválida\n");
             }
         }while(opcao != 0);
 

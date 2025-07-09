@@ -1,14 +1,40 @@
 package projeto201.conteudo.java02poo.aula06relacionamentos.ex02pedido.service;
 
+import projeto201.conteudo.java02poo.aula06relacionamentos.ex02pedido.domain.CadastroPedido;
 import projeto201.conteudo.java02poo.aula06relacionamentos.ex02pedido.domain.Pedido;
 import projeto201.conteudo.java02poo.aula06relacionamentos.ex02pedido.domain.Produto;
+import projeto201.conteudo.java02poo.aula06relacionamentos.ex02pedido.domain.CadastroProduto;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class PedidoService {
-    private List<Pedido> pedidos = new ArrayList<>();
+    private List<Pedido> pedidos;
+
+    public PedidoService() {
+        this.pedidos = CadastroPedido.gerarPedido();
+    }
+
+    // LISTAR PEDIDOS
+    public void listarPedidos(){
+        if(pedidos.isEmpty()){
+            System.out.println("Nenhum produto cadastrado");
+            return;
+        }
+        for (int i = 0; i < pedidos.size(); i++) {
+            System.out.println("Pedido " +(i+1)+": ");
+            pedidos.get(i).exibirDados();
+        }
+    }
+
+    // BUSCAR PEDIDO
+    public Pedido buscarPedido(int indice){
+        if(indice >= 0 && indice < pedidos.size()){
+            return pedidos.get(indice);
+        }
+        return null;
+    }
 
     // ADICIONAR PEDIDO
     public void adicionar(Scanner scanner){
@@ -21,7 +47,7 @@ public class PedidoService {
         System.out.println("Digite o nome do produto: ");
         String nomeProduto = scanner.nextLine();
 
-        System.out.println("Digite a gategoria do produto: ");
+        System.out.println("Digite a categoria do produto: ");
         String categoria = scanner.nextLine();
 
         System.out.println("Digite o preço do produto: ");
@@ -49,21 +75,4 @@ public class PedidoService {
             System.out.println("Número do pedido não encontrado");
         }
     }
-
-    // BUSCAR PEDIDO
-    public Pedido buscarPedido(int indice){
-        if(indice >= 0 && indice < pedidos.size()){
-            return pedidos.get(indice);
-        }
-        return null;
-    }
-
-    // LISTAR PEDIDOS
-    public void listarPedidos(){
-        for (int i = 0; i < pedidos.size(); i++) {
-            System.out.println("Pedido " +(i+1)+": ");
-            pedidos.get(i).exibirDados();
-        }
-    }
-
 }
