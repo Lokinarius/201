@@ -15,7 +15,7 @@ public class CarroTest {
 
         // CADASTRO
         for (int i = 0; i < totCarro; i++) {
-            System.out.println("\n Cadastro do "+(i+1)+"º carro: ");
+            System.out.println("\nCadastro do "+(i+1)+"º carro: ");
             Carro carro = new Carro();
 
             System.out.println("Marca: ");

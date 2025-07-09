@@ -118,7 +118,7 @@ public class ProdutoTest {
                                 }
 
                             case 0:
-                                System.out.println("Saindo do menu do produto...");
+                                System.out.println("Saindo do menu do produto...\n");
                                 break;
                             default:
                                 System.out.println("Opção inválida");

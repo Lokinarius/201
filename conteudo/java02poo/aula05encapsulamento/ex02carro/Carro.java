@@ -57,12 +57,12 @@ public class Carro {
     // MÉTODOS
     public void aumentarVelocidade(){
         velMax = 80;
-        System.out.println("velocidade máxima ajustada para o padrão mínimo");
+        System.out.println("velocidade máxima inválida! ajustada para o padrão mínimo");
     }
 
     public void diminuirVelocidade(){
         velMax = 300;
-        System.out.println("Velocidade máxima ajustada para o padrão máximo");
+        System.out.println("Velocidade máxima inválida! ajustada para o padrão máximo");
     }
 
     public void exibirDados(){

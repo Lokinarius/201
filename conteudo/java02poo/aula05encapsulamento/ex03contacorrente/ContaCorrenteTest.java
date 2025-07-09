@@ -67,6 +67,8 @@ public class ContaCorrenteTest {
                         break;
                     }
 
+                    System.out.println("\nBem vindo(a), %s".formatted(contaSelecionada.getUsuario()));
+
                     // Conta logada
                     int operacao;
                     do{
@@ -88,7 +90,8 @@ public class ContaCorrenteTest {
                                 contaSelecionada.exibirDados();
                                 break;
                             case 2:
-                                System.out.println("Saldo atual: R$ %d".formatted(contaSelecionada.getSaldo()));
+                                System.out.println("Saldo atual: R$ %.2f".formatted(contaSelecionada.getSaldo()));
+                                break;
                             case 3:
                                 System.out.println("Digite o valor para depósito: ");
                                 double valorDeposito = scanner.nextDouble();
@@ -98,7 +101,7 @@ public class ContaCorrenteTest {
                             case 4:
                                 System.out.println("Digite o valor para saque: ");
                                 double valorSaque = scanner.nextDouble();
-                                scanner.nextDouble();
+                                scanner.nextLine();
                                 contaSelecionada.sacar(valorSaque);
                                 break;
                             case 0:

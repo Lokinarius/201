@@ -19,7 +19,7 @@ public class CarroTest {
 
         // CADASTRO
         for (int i = 0; i < totCarro; i++) {
-            System.out.println("\n Cadastro do "+(i+1)+" carro: ");
+            System.out.println("\nCadastro do "+(i+1)+" carro: ");
             Carro carro = new Carro();
 
             System.out.println("Marca: ");
@@ -30,6 +30,7 @@ public class CarroTest {
 
             System.out.println("Velocidade Máxima: ");
             carro.setVelMax(scanner.nextInt());
+            scanner.nextLine();
 
             carros[i] = carro;
             System.out.println("-------------------------------------");
