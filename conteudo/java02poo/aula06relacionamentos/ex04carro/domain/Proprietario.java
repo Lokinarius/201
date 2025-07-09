@@ -47,6 +47,13 @@ public class Proprietario {
                 CPF: %s
                 Carros: %s
                 """.formatted(getNome(),getCpf(),getCarros()));
+        if (carros.isEmpty()) {
+            System.out.println(" - Nenhum carro registrado.");
+        } else {
+            for (Carro carro : carros) {
+                System.out.println(" - " + carro.getModelo() + " (" + carro.getPlaca() + ")");
+            }
+        }
     }
 
 }

@@ -1,6 +1,8 @@
 package projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.service;
 
 import projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.domain.Carro;
+import projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.domain.CriarCarro;
+import projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.domain.CriarProprietario;
 import projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.domain.Proprietario;
 
 import java.util.ArrayList;
@@ -11,6 +13,12 @@ public class ConcessionariaService {
     private List<Carro> carros = new ArrayList<>();
     private List<Proprietario> proprietarios = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
+
+
+    public ConcessionariaService() {
+        this.proprietarios = CriarProprietario.gerarProprietarios();
+        this.carros = CriarCarro.gerarCarros(this.proprietarios);
+    }
 
     // LISTAR CARROS
     public void listarCarros() {

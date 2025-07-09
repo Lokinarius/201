@@ -49,7 +49,7 @@ public class ConcessionariaTest {
                     System.out.println("Saindo...");
                     break;
                 default:
-                    System.out.println("Opção inválida");
+                    System.out.println("Opção inválida\n");
             }
         }while(opcao != 0);
 

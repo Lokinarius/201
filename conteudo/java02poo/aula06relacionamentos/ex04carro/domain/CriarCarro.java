@@ -20,4 +20,11 @@ public class CriarCarro {
 
         return carros;
     }
+
+    // Método auxiliar
+    private static Carro criarECadastrarCarro(String marca, String modelo, int ano, String placa, Proprietario proprietario) {
+        Carro carro = new Carro(marca, modelo, ano, placa, proprietario);
+        proprietario.getCarros().add(carro); // <-- registra no proprietário
+        return carro;
+    }
 }
