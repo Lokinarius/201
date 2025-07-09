@@ -18,9 +18,9 @@ public class Funcionario {
 
     public String getCargo() {return cargo;}
     public void setCargo(String cargo) {
-        if(nome == null || nome.isBlank()){
+        if (cargo == null || cargo.isBlank()) {
             this.cargo = "Cargo desconhecido";
-        }else{
+        } else {
             this.cargo = cargo;
         }
     }
@@ -43,12 +43,15 @@ public class Funcionario {
     }
 
     // METODOS
-    public void exibirDados(){
-        System.out.println("""
-                ====\t %s \t ====
-                Cargo: %s
-                Salário: %s
-                """.formatted(getNome(),getCargo(),getSalario()));
+    public void exibirDados() {
+        System.out.println(
+                """
+                ============================
+                Nome   : %s
+                Cargo  : %s
+                Salário: R$ %.2f
+                ============================
+                """.formatted(getNome(), getCargo(), getSalario())
+        );
     }
-
 }

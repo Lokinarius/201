@@ -1,14 +1,21 @@
 package projeto201.conteudo.java02poo.aula06relacionamentos.ex03empresa.service;
 
+import projeto201.conteudo.java02poo.aula06relacionamentos.ex03empresa.domain.CriarFuncionario;
 import projeto201.conteudo.java02poo.aula06relacionamentos.ex03empresa.domain.Funcionario;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class EmpresaService {
-    private List<Funcionario> funcionarios = new ArrayList<>();
+    private List<Funcionario> funcionarios;
     private Scanner scanner = new Scanner(System.in);
+
+    // CONSTRUTOR
+    public EmpresaService() {
+        this.funcionarios = CriarFuncionario.criarFuncionario();
+    }
 
     // LISTAR FUNCIONARIOS
     public void listarFuncionarios(){
@@ -32,7 +39,7 @@ public class EmpresaService {
         String nome = scanner.nextLine();
         Funcionario f = buscarFuncionarioPorNome(nome);
         if (f == null) {
-            System.out.println("Funcionário não encontrado");
+            System.out.println("Funcionário não encontrado(a)");
         }else{
             f.exibirDados();
         }
@@ -54,7 +61,7 @@ public class EmpresaService {
         Funcionario novoFuncionario = new Funcionario(nome,cargo,salario);
         funcionarios.add(novoFuncionario);
 
-        System.out.println(novoFuncionario.getNome()+" contratado");
+        System.out.println(novoFuncionario.getNome()+" contratado(a)");
     }
 
     // CONCEDER AUMENTO
@@ -80,8 +87,7 @@ public class EmpresaService {
         Funcionario funcionario = buscarFuncionario();
         if (funcionario != null) {
             funcionarios.remove(funcionario);
-            System.out.println(funcionario.getNome() + " demitido");
+            System.out.println(funcionario.getNome() + " demitido(a)");
         }
     }
-
 }
