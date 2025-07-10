@@ -12,6 +12,15 @@ public class EscolaService {
     private static EscolaProfissionalizante escola;
     private static Scanner scanner = new Scanner(System.in);
 
+    public static void inicializar() {
+        List<Sede> sedes = new ArrayList<>();
+        sedes.add(new Sede("Sede Centro", new ArrayList<>()));
+        sedes.add(new Sede("Sede Zona Norte", new ArrayList<>()));
+        sedes.add(new Sede("Sede Online", new ArrayList<>()));
+
+        escola = new EscolaProfissionalizante("Escola Técnica Noturnos", sedes);
+    }
+
     // LISTAR ALUNOS
     public static void listarAlunos() {
         for(Sede sede : escola.getSedes()){
@@ -56,12 +65,17 @@ public class EscolaService {
     public static void matricularAluno() {
         System.out.println("Nome: ");
         String nome = scanner.nextLine();
+
         System.out.println("Matrícula: ");
         int matricula = scanner.nextInt();
+        scanner.nextLine();
+
         System.out.println("Curso: ");
         String curso = scanner.nextLine();
+
         System.out.println("Período: ");
         int periodo = scanner.nextInt();
+
         List<Sede> sedes = escola.getSedes();
 
         System.out.println("Escolha a sede: ");
@@ -70,10 +84,11 @@ public class EscolaService {
         }
 
         int opcao = scanner.nextInt() - 1;
+        scanner.nextLine();
+
         if(opcao >= 0 && opcao < sedes.size()){
             Sede sedeEscolhida = sedes.get(opcao);
-            Aluno novoAluno = new Aluno(nome,matricula,curso,periodo,sedeEscolhida);
-            sedeEscolhida.getAlunos().add(novoAluno);
+            Aluno aluno = new Aluno(nome,matricula,curso,periodo,sedeEscolhida);
             System.out.println("Aluno matriculado!");
         }else{
             System.out.println("opção invalida.");

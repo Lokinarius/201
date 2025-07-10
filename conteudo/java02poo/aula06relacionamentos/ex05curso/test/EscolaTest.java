@@ -11,6 +11,8 @@ public class EscolaTest {
         Scanner scanner = new Scanner(System.in);
         int opcao;
 
+        EscolaService.inicializar();
+
         // ENTRADA DE DADOS
         do{
             System.out.println("""
