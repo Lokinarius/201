@@ -1,13 +1,13 @@
 package projeto201.conteudo.java02poo.aula06relacionamentos.ex04carro.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Proprietario {
     // ATRIBUTOS
     private String nome;
     private String cpf;
-    private List<Carro> carros;
-
+    private List<Carro> carros = new ArrayList<>();
 
 
     // GETTERS E SETTERS
@@ -16,6 +16,7 @@ public class Proprietario {
 
     public String getCpf() {return cpf;}
     public void setCpf(String cpf) {this.cpf = cpf;}
+
 
     public List<Carro> getCarros() {return carros;}
     public void setCarros(List<Carro> carros) {this.carros = carros;}
@@ -33,26 +34,16 @@ public class Proprietario {
 
     // METODOS
     public void exibirDados(){
-        StringBuilder carroAdiquiridos = new StringBuilder();
-        for(Carro carro: carros){
-            carroAdiquiridos.append(carro.getModelo()).append(", ");
-        }
-        if(!carros.isEmpty()){
-            carroAdiquiridos.setLength(carroAdiquiridos.length() - 2);
-        }
-
         System.out.println("""
-                ======================
-                Nome:%s
-                CPF: %s
-                Carros: %s
-                """.formatted(getNome(),getCpf(),getCarros()));
-        if (carros.isEmpty()) {
-            System.out.println(" - Nenhum carro registrado.");
-        } else {
-            for (Carro carro : carros) {
-                System.out.println(" - " + carro.getModelo() + " (" + carro.getPlaca() + ")");
-            }
+        \n======================
+        Nome: %s
+        CPF: %s
+        """.formatted(getNome(), getCpf()));
+        for (Carro carro : carros) {
+            System.out.println(" - " + carro);
+        }
+        if(carros.isEmpty()){
+            System.out.println("Essa pessoa não possui carros");
         }
     }
 

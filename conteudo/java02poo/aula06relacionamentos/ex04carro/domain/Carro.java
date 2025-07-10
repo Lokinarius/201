@@ -47,6 +47,11 @@ public class Carro {
     }
 
     // METODOS
+    @Override
+    public String toString() {
+        return modelo + " (" + placa + ")";
+    }
+
     public void exibirDados() {
         String nomeProprietario = (getProprietario() != null) ? getProprietario().getNome() : "Sem proprietário";
         System.out.println("""

@@ -10,8 +10,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ConcessionariaService {
-    private List<Carro> carros = new ArrayList<>();
-    private List<Proprietario> proprietarios = new ArrayList<>();
+    private List<Proprietario> proprietarios = CriarProprietario.gerarProprietarios();
+    private List<Carro> carros = CriarCarro.gerarCarros(proprietarios);
+
+
     private Scanner scanner = new Scanner(System.in);
 
 
@@ -85,6 +87,12 @@ public class ConcessionariaService {
             carros.remove(carro);
             System.out.println(carro.getModelo()+" Vendido");
         }
+        Proprietario proprietario = carro.getProprietario();
+        if (proprietario != null) {
+            proprietario.getCarros().remove(carro);
+        }
+
+        System.out.println(carro.getModelo() + " vendido com sucesso!");
     }
 
     // COMPRA DE CARRO
@@ -122,7 +130,9 @@ public class ConcessionariaService {
         carro.setPlaca(placa);
         carro.setProprietario(proprietario);
 
+        proprietario.getCarros().add(carro);
         carros.add(carro);
+
         System.out.println("Carro comprado com sucesso!");
     }
 }
