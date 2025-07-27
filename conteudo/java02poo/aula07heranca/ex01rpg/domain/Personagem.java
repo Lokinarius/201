@@ -19,19 +19,32 @@ public class Personagem {
 
 
     // METODOS
+    // combate
     public int getvidaMaxima(){
         return atributos.getVIT() * 10;
     }
-    public void atacar(){
 
+    public void atacar(){
+        System.out.println(nome+" atacou!");
     }
 
+    public void defender(){
+        System.out.println(nome+" defendeu!");
+    }
+
+    public void usarHabilidade(){
+        System.out.println(nome+" usou habilidade");
+    }
+
+    // status
     public void status(){
         System.out.println("""
                 Nome: %s
                 Level: %s
                 Exp: %s
-                """.formatted(nome,level,exp));
+                Vida: %s/%s
+                Atributos:
+                """.formatted(nome,level,exp,vidaAtual,getvidaMaxima()));
     }
 
 }
