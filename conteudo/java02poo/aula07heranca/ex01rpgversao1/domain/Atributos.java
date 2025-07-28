@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.aula07heranca.ex01rpg.domain;
+package projeto201.conteudo.java02poo.aula07heranca.ex01rpgversao1.domain;
 
 public class Atributos {
     // atributos

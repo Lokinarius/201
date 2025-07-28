@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.aula07heranca.ex01rpg.domain;
+package projeto201.conteudo.java02poo.aula07heranca.ex01rpgversao1.domain;
 
 public class Guerreiro extends Personagem {
     private String arma;
@@ -10,11 +10,6 @@ public class Guerreiro extends Personagem {
 
 
     // OVERRIDE
-    @Override
-    public int getvidaMaxima() {
-        return super.getvidaMaxima();
-    }
-
     @Override
     public void atacar() {
         System.out.println(nome+" atacou com "+arma+" causando "+atributos.FOR*2+"de dano");
