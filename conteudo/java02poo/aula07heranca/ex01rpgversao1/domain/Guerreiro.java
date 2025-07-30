@@ -8,6 +8,10 @@ public class Guerreiro extends Personagem {
         this.arma = arma;
     }
 
+    public Guerreiro() {
+        super();
+    }
+
 
     // OVERRIDE
     @Override

@@ -17,6 +17,10 @@ public class Personagem {
         this.vidaAtual = getvidaMaxima();
     }
 
+    public Personagem() {
+
+    }
+
 
     // METODOS
     // combate

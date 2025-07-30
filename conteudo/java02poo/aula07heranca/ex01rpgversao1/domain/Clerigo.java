@@ -8,6 +8,10 @@ public class Clerigo extends Personagem{
         this.simboloSagrado = simboloSagrado;
     }
 
+    public Clerigo() {
+
+    }
+
     @Override
     public void atacar() {
         System.out.println(nome+"lançou uma rajada divina com o simbolo "+ simboloSagrado+" causando "+(atributos.INT*2)+" de dano sagrado!");

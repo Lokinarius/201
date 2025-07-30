@@ -8,6 +8,10 @@ public class Ladino extends Personagem{
         this.adaga = adaga;
     }
 
+    public Ladino() {
+
+    }
+
 
     @Override
     public void atacar() {

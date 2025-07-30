@@ -9,6 +9,10 @@ public class Mago extends Personagem{
         this.cajado = cajado;
     }
 
+    public Mago() {
+
+    }
+
     @Override
     public void atacar() {
         System.out.println(nome + " lançou uma magia de fogo com o cajado " + cajado + " causando " + (atributos.INT * 3) + " de dano mágico!");
