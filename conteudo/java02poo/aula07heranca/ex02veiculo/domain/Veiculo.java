@@ -5,12 +5,14 @@ public class Veiculo {
     protected String marca;
     protected String modelo;
     protected int ano;
+    protected int roda;
 
 
-    public Veiculo(String marca, String modelo, int ano) {
+    public Veiculo(String marca, String modelo, int ano, int roda) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
+        this.roda = roda;
     }
 
 
@@ -23,6 +25,11 @@ public class Veiculo {
     }
 
     public void exibirInfo(){
-
+        System.out.println("""
+                Marca: %s
+                Modelo: %s
+                Ano: %s
+                Rodas: %s
+                """.formatted(marca,modelo,ano, roda));
     }
 }
