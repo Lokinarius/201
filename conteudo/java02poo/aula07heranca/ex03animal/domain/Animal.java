@@ -4,17 +4,15 @@ public class Animal {
     // ATRIBUTOS
     protected String nome;
     protected int idade;
-    protected String especie;
+    protected String raca;
     protected double peso;
-    protected String tipoAnimal;
 
     // CONSTRUTOR
-    public Animal(String nome, int idade, String especie, double peso, String tipoAnimal) {
+    public Animal(String nome, int idade, String raca, double peso) {
         this.nome = nome;
         this.idade = idade;
-        this.especie = especie;
+        this.raca = raca;
         this.peso = peso;
-        this.tipoAnimal = tipoAnimal;
     }
 
     // METODOS
@@ -24,11 +22,10 @@ public class Animal {
 
     public void exibirInfo(){
         System.out.println("""
-                Tipo de animal: %s
-                Espécie: %s
+                Raça: %s
                 Nome: %s
                 Idade: %s
                 Peso: %s
-                """.formatted(tipoAnimal,especie,nome,idade,peso));
+                """.formatted(raca,nome,idade,peso));
     }
 }
