@@ -1,7 +1,7 @@
 package projeto201.conteudo.java02poo.aula07heranca.ex03animal.domain;
 
 public class Gato extends Animal{
-    public Gato(String nome, int idade, String especie, double peso) {
+    public Gato(String nome, int idade, String raca, double peso) {
         super(nome, idade, "Gato", peso);
     }
 

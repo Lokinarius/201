@@ -1,7 +1,7 @@
 package projeto201.conteudo.java02poo.aula07heranca.ex03animal.domain;
 
 public class Cachorro extends Animal{
-    public Cachorro(String nome, int idade, String especie, double peso) {
+    public Cachorro(String nome, int idade, String raca, double peso) {
         super(nome, idade, "Cachorro", peso);
     }
 
