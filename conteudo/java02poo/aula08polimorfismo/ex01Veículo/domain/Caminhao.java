@@ -22,4 +22,9 @@ public class Caminhao extends Veiculo {
     public double calcularAutonomia() {
         return tanque*consumo;
     }
+
+    @Override
+    protected String detalhes() {
+        return "Capacidade de carga: " + capacidadeCarga + " t";
+    }
 }

@@ -22,4 +22,9 @@ public class Lancha extends Veiculo{
     public double calcularAutonomia() {
         return tanque*consumo;
     }
+
+    @Override
+    protected String detalhes() {
+        return "Comprimento: " + comprimento + " m";
+    }
 }

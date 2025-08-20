@@ -24,13 +24,19 @@ public abstract class Veiculo {
     public abstract void abastecer();
     public abstract double calcularAutonomia();
 
+
+    // gancho para outras classes
+    protected abstract String detalhes();
+
     // EXIBIR DADOS
-    public void exibirInfo(){
+    public final void exibirInfo(){
         System.out.println("""
                 Marca: %s
                 Modelo: %s
                 Ano: %s
                 Rodas: %s
-                """.formatted(marca, modelo, ano, roda));
+                %s
+                """.formatted(marca, modelo, ano, roda, detalhes()));
+
     }
 }

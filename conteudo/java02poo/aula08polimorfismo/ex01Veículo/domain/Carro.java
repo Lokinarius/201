@@ -22,4 +22,9 @@ public class Carro extends Veiculo {
     public double calcularAutonomia() {
         return 0;
     }
+
+    @Override
+    protected String detalhes() {
+        return "Portas: " + portas;
+    }
 }

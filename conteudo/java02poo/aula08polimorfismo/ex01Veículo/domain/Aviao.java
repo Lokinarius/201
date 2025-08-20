@@ -24,4 +24,9 @@ public class Aviao extends Veiculo{
     public double calcularAutonomia() {
         return tanque*consumo;
     }
+
+    @Override
+    protected String detalhes() {
+        return "Envergadura: " + envergadura + " m\nMotores: " + motores;
+    }
 }

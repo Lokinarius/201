@@ -22,4 +22,9 @@ public class Moto extends Veiculo {
     public double calcularAutonomia() {
         return tanque*consumo;
     }
+
+    @Override
+    protected String detalhes() {
+        return "Cilindradas: " + cilindradas + " cc";
+    }
 }
