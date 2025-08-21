@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.aula08polimorfismo.ex01Veículo.domain;
+package projeto201.conteudo.java02poo.aula08polimorfismo.ex01veículo.domain;
 
 public class Carro extends Veiculo {
     private int portas;

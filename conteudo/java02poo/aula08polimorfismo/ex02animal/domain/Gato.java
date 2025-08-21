@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.aula08polimorfismo.ex02Animal.domain;
+package projeto201.conteudo.java02poo.aula08polimorfismo.ex02animal.domain;
 
 public class Gato extends Animal{
     // atributos

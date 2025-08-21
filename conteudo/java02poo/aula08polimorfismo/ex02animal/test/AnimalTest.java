@@ -1,6 +1,6 @@
-package projeto201.conteudo.java02poo.aula08polimorfismo.ex02Animal.test;
+package projeto201.conteudo.java02poo.aula08polimorfismo.ex02animal.test;
 
-import projeto201.conteudo.java02poo.aula08polimorfismo.ex02Animal.domain.*;
+import projeto201.conteudo.java02poo.aula08polimorfismo.ex02animal.domain.*;
 
 import java.util.ArrayList;
 
@@ -35,6 +35,7 @@ public class AnimalTest {
         animais.add(iguana1);
         animais.add(iguana2);
 
+        //loop
         for (Animal a: animais){
             a.exibirDados();
             a.emitirSom();

@@ -1,4 +1,4 @@
-package projeto201.conteudo.java02poo.aula08polimorfismo.ex01Veículo.domain;
+package projeto201.conteudo.java02poo.aula08polimorfismo.ex01veículo.domain;
 
 public class Aviao extends Veiculo{
     private double envergadura;

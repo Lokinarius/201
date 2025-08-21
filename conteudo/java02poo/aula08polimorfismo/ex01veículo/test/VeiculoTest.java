@@ -1,6 +1,6 @@
-package projeto201.conteudo.java02poo.aula08polimorfismo.ex01Veículo.test;
+package projeto201.conteudo.java02poo.aula08polimorfismo.ex01veículo.test;
 
-import projeto201.conteudo.java02poo.aula08polimorfismo.ex01Veículo.domain.*;
+import projeto201.conteudo.java02poo.aula08polimorfismo.ex01veículo.domain.*;
 import java.util.ArrayList;
 
 public class VeiculoTest {
