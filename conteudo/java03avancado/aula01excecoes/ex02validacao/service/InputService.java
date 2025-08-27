@@ -18,7 +18,7 @@ public class InputService {
             return numero;
         }catch (InputMismatchException e){
             scanner.nextLine();
-            throw new EntradaInvalidaException("O valor digitado não é um número");
+            throw new EntradaInvalidaException("O valor digitado não é um número inteiro");
         }
     }
 }
