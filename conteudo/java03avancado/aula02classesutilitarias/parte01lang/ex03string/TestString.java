@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex03String;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex03string;
 
 import java.util.Scanner;
 

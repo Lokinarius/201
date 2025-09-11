@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex01Math;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex01math;
 
 import java.util.Scanner;
 

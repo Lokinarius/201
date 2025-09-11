@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex02Wrapper;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex02wrapper;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class TestWrapper {
 
         do{
             System.out.println("""
-                    \n === WRAPPER ===
+                    \n === MENU WRAPPER ===
                     1 - Boxing e Unboxing
                     2 - Conversões (String e Número)
                     3 - Uso em coleções

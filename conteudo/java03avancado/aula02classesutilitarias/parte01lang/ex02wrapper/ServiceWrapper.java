@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex02Wrapper;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex02wrapper;
 
 import java.util.ArrayList;
 import java.util.Scanner;

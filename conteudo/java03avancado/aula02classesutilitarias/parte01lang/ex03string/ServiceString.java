@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex03String;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex03string;
 
 import java.util.Scanner;
 
@@ -16,6 +16,7 @@ public class ServiceString {
     public void exibirCaractere() {
         System.out.println("Digite um texto: ");
         String texto = sc.nextLine();
+        System.out.println("Digite a posição: ");
         int pos = sc.nextInt();
         if(pos >= 0 && pos < texto.length()){
             System.out.println("Caractere: "+texto.charAt(pos));
@@ -55,12 +56,12 @@ public class ServiceString {
 
         System.out.println("Maiúsculas: " + texto.toUpperCase());
         System.out.println("Minúsculas: " + texto.toLowerCase());
-        System.out.println("Substituir 'a por @: " + texto.replace('a','@'));
+        System.out.println("Substituir 'a por @: \n " + texto.replace('a','@'));
     }
 
     // dividir String ( split - trim )
     public void dividirTexto() {
-        System.out.println("Digite um texto som vírgulas: ");
+        System.out.println("Digite um texto com vírgulas: ");
         String texto = sc.nextLine();
 
         String[] partes = texto.split(",");

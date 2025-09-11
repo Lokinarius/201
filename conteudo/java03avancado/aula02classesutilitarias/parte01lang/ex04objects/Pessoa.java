@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex04Objects;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex04objects;
 
 public class Pessoa {
     private String nome;

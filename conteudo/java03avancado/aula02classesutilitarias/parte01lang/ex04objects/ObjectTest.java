@@ -1,4 +1,4 @@
-package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.Ex04Objects;
+package projeto201.conteudo.java03avancado.aula02classesutilitarias.parte01lang.ex04objects;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class ObjectTest {
 
     do{
         System.out.println("""
-                \n --- OBJECT ---
+                \n --- MENU OBJECT ---
                 1 - Demonstrar toString
                 2 - Demonstrar equals
                 3 - Demonstrar hashCode
