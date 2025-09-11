@@ -14,6 +14,7 @@ public class Produto {
         this.preco = preco;
         this.estoque = estoque;
     }
+    
 
     // getters and setters
     public int getId() {return id;}
