@@ -5,14 +5,12 @@ public class Produto {
     private int id;
     private String nome;
     private double preco;
-    private int estoque;
 
     // construtor
-    public Produto(int id, String name, double preco, int estoque) {
+    public Produto(int id, String name, double preco) {
         this.id = id;
         this.nome = name;
         this.preco = preco;
-        this.estoque = estoque;
     }
     
 
@@ -26,9 +24,6 @@ public class Produto {
     public double getPreco() {return preco;}
     public void setPreco(double preco) {this.preco = preco;}
 
-    public int getEstoque() {return estoque;}
-    public void setEstoque(int estoque) {this.estoque = estoque;}
-
     // to string
     @Override
     public String toString() {
@@ -36,7 +31,6 @@ public class Produto {
                 "id=" + id +
                 ", name='" + nome + '\'' +
                 ", preco=" + preco +
-                ", estoque=" + estoque +
                 '}';
     }
 }

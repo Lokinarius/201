@@ -8,8 +8,9 @@ public class Compra {
     // atributos
     private int id;
     private Cliente cliente;
-    private List<ItemCompra> itens = new ArrayList<>();
+    private List<Produto> itens = new ArrayList<>();
     private LocalDate data;
+    private double valorTotal;
 
     // construtor
     public Compra(int id, Cliente cliente) {
@@ -25,11 +26,11 @@ public class Compra {
     public Cliente getCliente() {return cliente;}
     public void setCliente(Cliente cliente) {this.cliente = cliente;}
 
-    public List<ItemCompra> getItens() {
+    public List<Produto> getItens() {
         return itens;
     }
 
-    public void setItens(List<ItemCompra> itens) {
+    public void setItens(List<Produto> itens) {
         this.itens = itens;
     }
 
@@ -41,12 +42,14 @@ public class Compra {
         this.data = data;
     }
 
-    public void adicionarItem(ItemCompra item) {
+    public void adicionarItem(Produto item) {
         itens.add(item);
     }
 
     public double getValorTotal() {
-        return itens.stream().mapToDouble(ItemCompra::getSubtotal).sum();
+        return itens.stream()
+                .mapToDouble(Produto::getPreco)
+                .sum();
     }
 
     // to string
