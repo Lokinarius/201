@@ -11,6 +11,6 @@ public class Cachorro extends Animal{
     }
 
     public void abanarRabo(){
-        System.out.println(nome+ "está abanando o rabo!");
+        System.out.println(nome+ " está abanando o rabo!");
     }
 }
